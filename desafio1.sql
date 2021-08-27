@@ -1,0 +1,1 @@
+SELECT COUNTRY_NAME AS 'País', IF (REGION_ID = 1,  'incluso', 'Não incluso') AS 'EUROPA' FROM hr.countries
