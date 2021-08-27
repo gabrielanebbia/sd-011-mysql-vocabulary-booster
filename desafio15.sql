@@ -6,7 +6,7 @@ IN cargo VARCHAR(200)
 )
 BEGIN
 SELECT 
-ROUND(AVG(SALARY), 2)
+ROUND(AVG(SALARY), 2) AS 'Média salarial'
 FROM
 employees AS employees
 INNER JOIN
