@@ -1,4 +1,4 @@
-SELECT jobs_table.JOB_ID AS Cargo,
+SELECT jobs_table.JOB_TITLE AS Cargo,
 ROUND(AVG(employees_table.SALARY), 2) AS 'Média salarial',
 CASE
 WHEN MAX_SALARY BETWEEN 2000 AND 5800 THEN 'Júnior'
