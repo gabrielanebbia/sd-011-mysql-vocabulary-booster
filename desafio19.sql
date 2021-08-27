@@ -2,7 +2,7 @@ USE hr;
 DELIMITER $$
 
 CREATE FUNCTION exibir_quantidade_pessoas_contratadas_por_mes_e_ano(mes VARCHAR(2), ano VARCHAR(4))
-RETURNS VARCHAR(30) READS SQL DATA
+RETURNS INT READS SQL DATA
 BEGIN
 DECLARE total_hire INT;
 SELECT 
