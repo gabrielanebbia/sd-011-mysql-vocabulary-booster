@@ -3,4 +3,4 @@ select job_title as Cargo,
 round((min_salary / 12), 2) as `Média mínima mensal`,
 round((max_salary / 12), 2) as `Média máxima mensal`
 from jobs
-order by (max_salary - min_salary);
+order by (max_salary - min_salary), job_title;
