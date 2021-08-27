@@ -5,3 +5,5 @@ FROM w3schools.customers c1, w3schools.customers c2
 WHERE c1.Country = c2.Country
 GROUP BY c1.CustomerName, c1.Country
 ORDER BY c1.CustomerName;
+
+SELECT * FROM w3schools.customers;
