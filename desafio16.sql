@@ -14,5 +14,4 @@ FROM
         AND employees.EMAIL = email INTO nJobs;
         RETURN nJobs;
 END $$
-
 DELIMITER ;
