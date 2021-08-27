@@ -1,0 +1,1 @@
+-- Iniciando projeto MySQL Vocabulary Booster
