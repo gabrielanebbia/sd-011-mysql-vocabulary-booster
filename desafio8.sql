@@ -10,4 +10,4 @@ INNER JOIN
 w3schools.shippers AS shippers_table ON orders_table.ShipperID = shippers_table.ShipperID
 WHERE
 shippers_table.ShipperID IN (1, 2)
-ORDER BY `Nome do Contato` ASC, `Empresa que fez o envio` ASC;
+ORDER BY `Nome do Contato` ASC, `Empresa que fez o envio` ASC, `Data do pedido` ASC;
