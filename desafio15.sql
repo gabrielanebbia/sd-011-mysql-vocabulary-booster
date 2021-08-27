@@ -6,7 +6,7 @@ BEGIN
   WHERE JOB_ID IN (
     SELECT JOB_ID
     FROM hr.jobs
-	WHERE JOB_TITLE = nome_do_cargo
+    WHERE JOB_TITLE = nome_do_cargo
   )
   GROUP BY JOB_ID;
 END $$
