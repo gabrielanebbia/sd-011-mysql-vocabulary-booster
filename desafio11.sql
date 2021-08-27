@@ -1,7 +1,5 @@
-SELECT A.ContactName AS "Nome",
-A.Country AS "País", 
-COUNT(A.Country) AS "Número de compatriotas"
-FROM customers AS A, customers AS B
-WHERE A.Country = B.Country AND A.ContactName <> B.ContactName
-GROUP BY A.ContactName
-ORDER BY A.ContactName;
+SELECT a.contactName AS "Nome", 
+a.Country AS "País", 
+(SELECT COUNT(*) FROM customers AS b WHERE a.country = b.country AND a.ContactName <> b.ContactName)
+FROM customers AS a
+ORDER BY a.ContactName;
