@@ -1,4 +1,3 @@
- 
 SELECT CONCAT(EMP1.FIRST_NAME, ' ', EMP1.LAST_NAME) `Nome completo funcionário 1`,
 EMP1.SALARY `Salário funcionário 1`, EMP1.PHONE_NUMBER `Telefone funcionário 1`,
 CONCAT(EMP2.FIRST_NAME, ' ', EMP2.LAST_NAME) `Nome completo funcionário 2`,
