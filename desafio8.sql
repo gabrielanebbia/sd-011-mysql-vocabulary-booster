@@ -6,4 +6,4 @@ INNER JOIN w3schools.customers AS C
 ON C.CustomerID = O.CustomerID
 INNER JOIN w3schools.shippers AS S
 ON S.ShipperID = O.ShipperID
-ORDER BY C.CustomerName, S.ShipperName, O.OrderDate;
+ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;
