@@ -4,5 +4,3 @@ FROM w3schools.orders AS O
 INNER JOIN w3schools.employees AS E
 ON E.EmployeeID = O.EmployeeID
 WHERE O.CustomerID = E.EmployeeID;
-
--- AS "Total de pedidos"
