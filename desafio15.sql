@@ -8,4 +8,3 @@ ON jobs.JOB_ID = emp.JOB_ID
 WHERE jobs.JOB_TITLE = cargo;
 END $$
 DELIMITER ;
-
