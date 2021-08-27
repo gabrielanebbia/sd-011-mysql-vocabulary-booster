@@ -2,7 +2,7 @@
 
 Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe.
 
---
+---
 
 # Boas vindas ao repositório do projeto Vocabulary Booster!
 
@@ -208,27 +208,27 @@ Qualquer dúvida, procure a monitoria. Lembre-se que você pode consultar nosso 
 
 4. Selecione todo o código com o atalho `CTRL-A` e clique no ícone de trovão para executar o script.
 
-   ![Restaurando o banco w3schools](images/restore_database_1.png)
+![Restaurando o banco w3schools](images/restore_database_1.png)
 
 5. Aguarde alguns segundos (espere em torno de 30 segundos antes de tentar fazer algo).
 
 6. Clique no botão apontado na imagem a seguir para atualizar a listagem de banco de dados:
 
-   ![Tabelas do banco w3schools](images/refresh_databases.png)
+![Tabelas do banco w3schools](images/refresh_databases.png)
 
 7. Verifique se o banco restaurado possui todas as seguintes tabelas:
 
-   ![Tabelas do banco w3schools](images/w3school.png)
+![Tabelas do banco w3schools](images/w3school.png)
 
 8. Clique com botão direito em cada tabela e selecione "Select Rows". Certifique-se de que todas as tabelas possuem registros. Se alguma estiver vazia ou ausente, faça o passo a seguir. Caso contrário, vá direto para o passo 10.
 
 9. Caso haja tabelas faltando, delete o banco de dados clicando com o botão direito em cima do banco de dados `w3schools` e selecione a opção `Drop Schema...`. Refaça os passos anteriores, desta vez aguardando um tempo maior quando executar o script de restauração.
 
-   ![Drop Schema](images/drop_schema.png)
+![Drop Schema](images/drop_schema.png)
 
 10. O mesmo processo mencionado anteriormente também deve ser feito para restaurar o banco `hr`. Verifique se o banco `hr` restaurado possui todas as tabelas indicadas na imagem abaixo. Se alguma estiver vazia ou ausente, faça o passo a seguir. Caso contrário, vá direto para a próxima seção.
 
-    ![Tabelas do banco hr](images/hr.png)
+![Tabelas do banco hr](images/hr.png)
 
 11. Caso haja tabelas faltando, delete o banco de dados clicando com o botão direito em cima do banco de dados `hr` e selecione a opção `Drop Schema...`. Refaça o passo anterior, desta vez aguardando um tempo maior quando executar o script de restauração.
 
@@ -290,13 +290,13 @@ Seu relatório deve possuir as seguintes colunas:
 
 2. A segunda deve possuir o alias "**Nível**" e exibir o nível de remuneração do cargo com base no seu **salário máximo**, categorizando os níveis de remuneração da seguinte forma:
 
-   Salário máximo entre 5000 e 10000 :arrow_right: Baixo
+Salário máximo entre 5000 e 10000 :arrow_right: Baixo
 
-   Salário máximo entre 10001 e 20000 :arrow_right: Médio
+Salário máximo entre 10001 e 20000 :arrow_right: Médio
 
-   Salário máximo entre 20001 e 30000 :arrow_right: Alto
+Salário máximo entre 20001 e 30000 :arrow_right: Alto
 
-   Salário máximo acima de 30000 :arrow_right: Altíssimo
+Salário máximo acima de 30000 :arrow_right: Altíssimo
 
 Os resultados devem estar ordenados pelo nome do cargo em ordem alfabética.
 
@@ -332,13 +332,13 @@ Crie uma query que exiba 03 colunas:
 
 3. A terceira deve possuir o alias "**Senioridade**" e categorizar o nível de senioridade do cargo com base na média salarial, da seguinte forma:
 
-   Média salarial entre 2000 - 5800 :arrow_right: Júnior
+Média salarial entre 2000 - 5800 :arrow_right: Júnior
 
-   Média salarial entre 5801 - 7500 :arrow_right: Pleno
+Média salarial entre 5801 - 7500 :arrow_right: Pleno
 
-   Média salarial entre 7501 - 10500 :arrow_right: Sênior
+Média salarial entre 7501 - 10500 :arrow_right: Sênior
 
-   Média salarial acima de 10500 :arrow_right: CEO
+Média salarial acima de 10500 :arrow_right: CEO
 
 Sempre que fizer uso da média salarial, arredonde o valor para 02 casas decimais.
 

@@ -6,5 +6,3 @@ ELSE 'não incluído'
 END AS "Status Inclusão"
 FROM hr.countries
 ORDER BY COUNTRY_NAME;
-
-
