@@ -17,7 +17,7 @@
 -- Se houver empresas com o mesmo nome, ordene os resultados pela data do pedido em ordem crescente.
 
 SELECT 
-C.ContactName AS `Nome de Contato`,
+C.ContactName AS `Nome de contato`,
 S.ShipperName AS `Empresa que fez o envio`,
 O.OrderDate AS `Data do pedido`
 FROM 
