@@ -6,7 +6,7 @@ WHEN AVG(e.SALARY) > 10500 THEN 'CEO'
 ELSE AVG(e.SALARY)
 END AS 'Senioridade'
 FROM hr.jobs AS j
-INNER JOIN employees AS e
+INNER JOIN hr.employees AS e
 ON j.JOB_ID = e.JOB_ID
 GROUP BY JOB_TITLE
 ORDER BY AVG(e.SALARY), j.JOB_TITLE;
