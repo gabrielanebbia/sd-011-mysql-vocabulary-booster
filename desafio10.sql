@@ -11,4 +11,6 @@ GROUP BY
 HAVING
   AVG(od.Quantity) > 20
 ORDER BY
-  AVG(od.Quantity);
+  AVG(od.Quantity),
+  p.ProductName;
+
