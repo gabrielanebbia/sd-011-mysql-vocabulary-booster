@@ -1,14 +1,15 @@
 SELECT
 job_title AS 'Cargo',
+max_salary,
 (
 IF(
-max_salary < 10000,
+max_salary <= 10000,
 'Baixo',
 IF(
-max_salary < 20000,
+max_salary <= 20000,
 'Médio',
 IF(
-max_salary < 30000,
+max_salary <= 30000,
 'Alto',
 'Altíssimo'
 )
