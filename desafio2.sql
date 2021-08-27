@@ -15,4 +15,5 @@ max_salary < 30000,
 )
 )
 ) AS 'Nível'
-FROM hr.jobs;
+FROM hr.jobs
+ORDER BY job_title;
