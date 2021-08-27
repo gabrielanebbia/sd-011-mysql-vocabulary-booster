@@ -1,4 +1,6 @@
-- Use o banco w3schools como referência
+-- 11 - Exiba todas as pessoas clientes que possuem compatriotas.
+
+-- Use o banco w3schools como referência
 
 -- Mostre a quantidade de compatriotas para cada pessoa cliente.
 
