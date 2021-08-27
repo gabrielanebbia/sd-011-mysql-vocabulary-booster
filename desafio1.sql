@@ -5,4 +5,3 @@ FROM hr.countries AS C
 INNER JOIN hr.regions AS R
 ON C.REGION_ID = R.REGION_ID
 ORDER BY País;
-

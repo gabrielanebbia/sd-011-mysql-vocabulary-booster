@@ -8,4 +8,3 @@ WHEN MAX_SALARY >= 30000 THEN 'Altíssimo'
 END AS Nível
 FROM hr.jobs
 ORDER BY JOB_TITLE;
-
