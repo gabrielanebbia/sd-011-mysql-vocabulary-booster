@@ -1,4 +1,3 @@
-SELECT * FROM w3schools.products;
 SELECT 
 P.ProductName AS 'Produto',
 MIN(OD.Quantity) AS 'Mínima',

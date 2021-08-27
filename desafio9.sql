@@ -1,5 +1,5 @@
 SELECT 
-UCASE(CONCAT(e.FirstName, ' ', e.LastName)) AS 'Nome completo',
+CONCAT(e.FirstName, ' ', e.LastName) AS 'Nome completo',
 COUNT(o.EmployeeID) AS 'Total de pedidos'
 FROM w3schools.employees AS e
 INNER JOIN
