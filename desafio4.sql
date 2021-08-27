@@ -9,4 +9,4 @@ SELECT
     END AS Senioridade
 FROM hr.employees
 GROUP BY Cargo
-ORDER BY ROUND(AVG(SALARY), 2), Cargo;
+ORDER BY AVG(SALARY) ASC, Cargo ASC;
