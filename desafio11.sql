@@ -1,4 +1,4 @@
-SELECT t1.ContactName, 
+SELECT t1.ContactName AS 'Nome', 
 t1.Country AS 'País',
 (SELECT COUNT(*) FROM w3schools.customers t2
 WHERE t1.Country = t2.Country AND t1.CustomerID <> t2.CustomerID) AS 'Número de compatriotas'
