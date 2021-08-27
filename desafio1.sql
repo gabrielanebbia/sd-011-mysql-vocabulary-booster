@@ -1,10 +1,10 @@
 -- SELECT * FROM countries;
 -- SELECT * FROM jobs;
 SELECT 
-country_name AS 'Paises',
+country_name AS 'País',
 CASE
-WHEN region_id = 1 THEN 'Incluído'
-ELSE 'Não incluído'
+WHEN region_id = 1 THEN 'incluído'
+ELSE 'não incluído'
 END AS 'Status Inclusão'
 FROM
 countries ORDER BY country_name;
