@@ -21,4 +21,3 @@ ROUND((J.MAX_SALARY/12),2) AS 'Média máxima mensal'
 FROM hr.jobs as J
 ORDER BY (J.MAX_SALARY - J.MIN_SALARY), J.JOB_TITLE;
 
-
