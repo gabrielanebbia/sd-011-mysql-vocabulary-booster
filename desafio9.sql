@@ -5,6 +5,6 @@ FROM
   w3schools.orders AS o
   INNER JOIN w3schools.employees AS e ON o.EmployeeID = e.EmployeeID
 GROUP BY
-  e.FirstName
+  CONCAT(e.FirstName, ' ', e.LastName)
 ORDER BY
   COUNT(o.OrderID);
