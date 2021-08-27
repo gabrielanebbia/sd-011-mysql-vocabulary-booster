@@ -1,6 +1,6 @@
 SELECT
 jobs.job_title AS 'Cargo',
-AVG(employees.salary) AS 'Média salarial',
+CAST(AVG(employees.salary) AS DECIMAL(10, 2)) AS 'Média salarial',
 (
 IF(
 AVG(employees.salary) < 5800,
