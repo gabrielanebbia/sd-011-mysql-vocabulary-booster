@@ -12,9 +12,9 @@
 -- Os resultados devem estar ordenados pela média de quantidade nos pedidos em ordem crescente.
 -- Em caso de empate na média, os resultados devem ser ordenados pelo nome do produto em ordem alfabética.
 SELECT PROD.ProductName as 'Produto',
-       MIN(OD.Quantity) as 'Mínima',
-       MAX(OD.Quantity) as 'Máxima',
-       ROUND(AVG(OD.Quantity), 2) as 'Média'
+MIN(OD.Quantity) as 'Mínima',
+MAX(OD.Quantity) as 'Máxima',
+ROUND(AVG(OD.Quantity), 2) as 'Média'
 FROM w3schools.order_details as OD
 INNER JOIN w3schools.products as PROD
 ON OD.ProductID = PROD.ProductID
