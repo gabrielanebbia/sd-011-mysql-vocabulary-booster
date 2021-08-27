@@ -5,9 +5,9 @@ CASE
     WHEN ROUND(AVG(e.SALARY), 2) >= 7501 AND ROUND(AVG(e.SALARY), 2) <= 10500 THEN 'Sênior'
     WHEN ROUND(AVG(e.SALARY), 2) > 10500 THEN 'CEO'
     ELSE 'Não Registrado'
-END AS 'Nível'
+END AS 'Senioridade'
 FROM hr.employees AS e
-LEFT JOIN hr.jobs AS j
+INNER JOIN hr.jobs AS j
 ON j.JOB_ID = e.JOB_ID
 GROUP BY j.JOB_TITLE
 ORDER BY ROUND(AVG(e.SALARY), 2) ASC, j.JOB_TITLE;
