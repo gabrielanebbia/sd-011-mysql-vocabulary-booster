@@ -6,3 +6,4 @@ FROM
 ORDER BY
   (j.MAX_SALARY - j.MIN_SALARY),
   j.JOB_TITLE;
+  
