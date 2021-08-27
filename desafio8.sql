@@ -10,4 +10,5 @@ WHERE
   s.ShipperName IN ('Speedy Express', 'United Package')
 ORDER BY
   c.ContactName,
-  s.ShipperName;
+  s.ShipperName,
+  o.OrderDate;
