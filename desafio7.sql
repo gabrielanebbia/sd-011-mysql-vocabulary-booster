@@ -1,4 +1,4 @@
- SELECT 
+SELECT 
   UCASE(
     CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME)
     ) AS `Nome completo`,
