@@ -7,4 +7,5 @@ FROM hr.employees AS e
 INNER JOIN hr.jobs AS j
 ON e.JOB_ID = j.JOB_ID
 INNER JOIN hr.departments AS d
-ON e.DEPARTMENT_ID = d.DEPARTMENT_ID;
+ON e.DEPARTMENT_ID = d.DEPARTMENT_ID
+ORDER BY concat(e.FIRST_NAME, ' ', e.LAST_NAME) DESC, j.JOB_TITLE;
