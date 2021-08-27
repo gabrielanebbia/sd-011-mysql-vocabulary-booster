@@ -13,4 +13,4 @@ ON
 o.ShipperID = s.ShipperID
 WHERE ShipperName = 'Speedy Express'
 OR ShipperName = 'United Package'
-ORDER BY ContactName, ShipperName;
+ORDER BY ContactName, ShipperName, OrderDate;
