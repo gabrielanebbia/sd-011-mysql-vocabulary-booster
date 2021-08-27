@@ -3,4 +3,4 @@ ROUND(AVG(o.Quantity),2) AS 'Média' FROM w3schools.products AS p INNER JOIN w3s
 ON p.ProductID = o.ProductID
 GROUP BY p.ProductID 
 HAVING `Média` > 20.00 
-ORDER BY `Média`, `Produto`;
+ORDER BY `Média` ASC, `Produto` ASC;
