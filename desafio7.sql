@@ -10,8 +10,8 @@
 -- Em caso de empate no nome completo, ordene os resultados pela data de início que 
 -- a pessoa iniciou seu cargo, em ordem crescente.
 SELECT UCASE(CONCAT(EMP.FIRST_NAME, ' ', EMP.LAST_NAME)) AS "Nome completo",
-       DATE(JH.START_DATE) AS "Data de início",
-       EMP.SALARY AS "Salário"
+DATE(JH.START_DATE) AS "Data de início",
+EMP.SALARY AS "Salário"
 FROM hr.job_history as JH
 INNER JOIN hr.employees as EMP
 ON JH.EMPLOYEE_ID = EMP.EMPLOYEE_ID
