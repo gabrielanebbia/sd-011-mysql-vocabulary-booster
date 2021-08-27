@@ -8,7 +8,3 @@ END AS 'Senioridade'
 FROM hr.employees AS ep 
 INNER JOIN hr.jobs AS jb
 ON ep.JOB_ID = jb.JOB_ID GROUP BY jb.JOB_TITLE ORDER BY ROUND(AVG(ep.SALARY),2) ASC, ep.SALARY ASC;
-
-
-SELECT * FROM hr.jobs;
-SELECT * FROM hr.employees;
