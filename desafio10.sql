@@ -1,10 +1,11 @@
 SELECT
-P.ProductName AS "Nome do produto",
-COUNT(OD.EmployeeID) AS 'Total de pedidos'
-FROM w3schools.order_details AS OD
-INNER JOIN w3schools.products AS P
+P.ProductName AS "Produto",
+MIN(OD.Quantity) AS "Mínima",
+MAX(OD.Quantity) AS "Máxima",
+ROUND(AVG(OD.Quantity), 2) AS "Média"
+FROM w3schools.products AS P
+INNER JOIN w3schools.order_details AS OD
 ON OD.ProductID = P.ProductID
-WHERE OD.Quantity > 20.00
-ORDER BY
-P.ProductName,
-OD.Quantity;
+GROUP BY P.ProductName
+HAVING `Média` > 20.00
+ORDER BY `Média` , `Produto`;
