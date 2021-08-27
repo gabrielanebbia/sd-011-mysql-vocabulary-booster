@@ -1,0 +1,13 @@
+
+SELECT j.JOB_TITLE 'Cargo', ROUND(AVG(e.SALARY), 2) 'Média Salarial',
+CASE
+	WHEN (e.SALARY <= 5800 AND e.SALARY >= 2000) THEN 'Júnior'
+  WHEN (e.SALARY > 5800 AND e.SALARY <= 7500) THEN 'Pleno'
+  WHEN (e.SALARY > 7500 AND e.SALARY <= 10500) THEN 'Sênior'
+  WHEN (e.SALARY > 10500) THEN 'CEO'
+END AS 'Senioridade'
+FROM hr.employees e
+INNER JOIN hr.jobs j
+ON e.JOB_ID = j.JOB_ID
+GROUP BY j.JOB_TITLE
+ORDER BY ROUND(AVG(e.SALARY), 2), j.JOB_TITLE;
