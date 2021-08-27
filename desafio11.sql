@@ -1,6 +1,6 @@
 SELECT
   c1.ContactName AS 'Nome',
-  c1.Country AS 'Páis',
+  c1.Country AS 'País',
   (
     (
       SELECT

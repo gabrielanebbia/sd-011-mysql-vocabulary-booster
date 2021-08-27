@@ -1,10 +1,10 @@
 SELECT
-  Country AS 'Páis'
+  Country AS 'País'
 FROM
   w3schools.customers
 UNION
 SELECT
-  Country AS 'Páis'
+  Country AS 'País'
 FROM
   w3schools.suppliers
 ORDER BY
