@@ -8,4 +8,3 @@ CASE
     FROM jobs
     ORDER BY JOB_TITLE;
     
-    
