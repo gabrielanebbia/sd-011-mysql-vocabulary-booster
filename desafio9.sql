@@ -4,5 +4,5 @@ SELECT
 FROM orders AS O
 INNER JOIN employees AS E
   ON E.EmployeeID = O.EmployeeID
-GROUP BY `Nome Completo`
+GROUP BY O.EmployeeID
 ORDER BY `Total de pedidos`;
