@@ -1,9 +1,9 @@
 SELECT t2.job_title AS "Cargo",
-ROUND(AVG(salary), 2) AS "Média salarial",
+ROUND(AVG(t1.salary), 2) AS "Média salarial",
 CASE
-WHEN salary BETWEEN 2000 AND 5800 THEN "Júnior"
-WHEN salary BETWEEN 10001 AND 20000 THEN "Pleno"
-WHEN salary BETWEEN 20001 AND 30000 THEN "Sênior"
+WHEN t1.salary BETWEEN 2000 AND 5800 THEN "Júnior"
+WHEN t1.salary BETWEEN 5801 AND 7500 THEN "Pleno"
+WHEN t1.salary BETWEEN 7501 AND 10500 THEN "Sênior"
 ELSE "CEO"
 END AS "Senioridade"
 FROM hr.employees AS t1
