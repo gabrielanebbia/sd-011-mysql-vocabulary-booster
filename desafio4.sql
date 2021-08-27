@@ -7,9 +7,9 @@ WHEN SALARY BETWEEN 7501 AND 10500 THEN 'Sênior'
 WHEN SALARY > 10500 THEN 'CEO'
 END) AS 'Senioridade'
 FROM
-hr.employees AS e
+employees AS e
 INNER JOIN
-hr.jobs AS j
+jobs AS j
 ON
 j.JOB_ID = e.JOB_ID
 GROUP BY j.JOB_TITLE
