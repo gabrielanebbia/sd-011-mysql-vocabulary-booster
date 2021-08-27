@@ -6,4 +6,5 @@ b.salary AS 'Salário funcionário 2',
 b.phone_number AS 'Telefone funcionário 2'
 FROM hr.employees a, hr.employees b
 WHERE a.job_id = b.job_id
+AND CONCAT(a.first_name, ' ', a.last_name) <> CONCAT(b.first_name, ' ', b.last_name)
 ORDER BY CONCAT(a.first_name, ' ', a.last_name), CONCAT(b.first_name, ' ', b.last_name);
