@@ -8,5 +8,4 @@ ELSE 'Nao encontrado'
 END 
 AS 'Nível'
 FROM jobs
-ORDER BY Cargo
-ASC;
+ORDER BY Cargo ASC;
