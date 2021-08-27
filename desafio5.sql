@@ -5,4 +5,3 @@ ROUND(MAX_SALARY / 12, 2) AS 'Média máxima mensal'
 FROM hr.jobs
 ORDER BY MAX_SALARY - MIN_SALARY, JOB_TITLE;
 
-SELECT * from hr.jobs order by job_title;
