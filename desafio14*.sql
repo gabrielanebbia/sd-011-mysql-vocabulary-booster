@@ -1,9 +1,7 @@
 
-SELECT * FROM (
-(SELECT Country AS 'País' FROM w3schools.customers)
+SELECT Country AS 'País' FROM w3schools.customers
 UNION
-(SELECT Country AS 'País' FROM w3schools.suppliers)) T
-ORDER BY Country;
+SELECT Country AS 'País' FROM w3schools.suppliers
 LIMIT 5;
 
 -- DÁ ERRO NO MOMENTO QUE COLOCO O ORDER BY, MAS ESTOU FAZENDO DA MANEIRA ENSINADA NO CURSO, TENTEI COLOCAR OUTRO SELECT MAS NÃO FUNCIONOU
