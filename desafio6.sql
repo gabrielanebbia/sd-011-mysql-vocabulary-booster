@@ -2,7 +2,7 @@ SELECT (
   SELECT CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME)
   FROM hr.employees AS e
   WHERE e.EMPLOYEE_ID = h.EMPLOYEE_ID
-) AS `Nome Completo`,
+) AS `Nome completo`,
 (
   SELECT JOB_TITLE
   FROM hr.jobs AS j
@@ -16,4 +16,4 @@ START_DATE AS `Data de início do cargo`,
 ) AS `Departamento`
 FROM hr.job_history AS h
 WHERE DEPARTMENT_ID != 'NULL'
-ORDER BY `Nome Completo` DESC, `Cargo`;
+ORDER BY `Nome completo` DESC, `Cargo`;
