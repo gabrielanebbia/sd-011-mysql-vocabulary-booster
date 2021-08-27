@@ -23,4 +23,4 @@ ON ord.CustomerID = cust.CustomerID
 INNER JOIN w3schools.shippers as ship
 ON ord.ShipperID = ship.ShipperID
 WHERE ship.ShipperName IN ('Speedy Express', 'United Package')
-ORDER BY cust.ContactName ASC, ord.OrderDate ASC;
+ORDER BY cust.ContactName ASC, ship.ShipperName ASC, ord.OrderDate ASC;
