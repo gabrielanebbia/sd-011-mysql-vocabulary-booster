@@ -1,5 +1,5 @@
 SELECT (
-  SELECT CustomerName
+  SELECT ContactName
   FROM w3schools.customers AS c
   WHERE o.CustomerID = c.CustomerID
 ) AS `Nome de contato`,
