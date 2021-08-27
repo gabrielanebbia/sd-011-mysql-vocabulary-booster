@@ -13,4 +13,3 @@ HAVING
 ORDER BY
   AVG(od.Quantity),
   p.ProductName;
-
