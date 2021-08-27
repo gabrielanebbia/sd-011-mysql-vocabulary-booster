@@ -8,6 +8,6 @@ SELECT
 FROM
   w3schools.suppliers
 ORDER BY
-  Country
+  País
 LIMIT
   5;
