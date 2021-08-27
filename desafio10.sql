@@ -1,5 +1,5 @@
 SELECT
-details_table.ProductID 'Produto',
+products_table.ProductName 'Produto',
 MIN(details_table.Quantity) AS 'Mínima',
 MAX(details_table.Quantity) AS 'Máxima',
 ROUND(AVG(details_table.Quantity), 2) AS 'Média'
