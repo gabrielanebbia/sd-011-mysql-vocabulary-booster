@@ -11,4 +11,4 @@ HIRE_DATE AS `Data de início do cargo`,
   WHERE e.DEPARTMENT_ID = DEPARTMENT_ID
 ) AS `Departamento`
 FROM hr.employees AS e
-ORDER BY `Nome Completo`, `Cargo`;
+ORDER BY `Nome Completo` DESC, `Cargo`;
