@@ -1,4 +1,4 @@
-ELECT 
+SELECT 
   CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME) AS `Nome completo`,
   JB.JOB_TITLE AS Cargo,
   JH.START_DATE AS `Data de início do cargo`,
