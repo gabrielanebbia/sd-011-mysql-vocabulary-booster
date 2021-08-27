@@ -1,5 +1,5 @@
 SELECT
-  c1.ContactName AS 'NOME',
+  c1.ContactName AS 'Nome',
   c1.Country AS 'Páis',
   (
     (
