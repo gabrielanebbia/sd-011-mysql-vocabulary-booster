@@ -1,6 +1,5 @@
 SELECT
 job_title AS 'Cargo',
-max_salary,
 (
 IF(
 max_salary <= 10000,
