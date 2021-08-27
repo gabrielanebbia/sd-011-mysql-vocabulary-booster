@@ -6,14 +6,13 @@ RETURNS VARCHAR(30) READS SQL DATA
 BEGIN
 DECLARE total_hire INT;
 SELECT 
-	COUNT(*)
+COUNT(*)
 FROM
-    employees
+employees
 WHERE
-    MONTH(HIRE_DATE) = REPLACE(diaeano, RIGHT(diaeano, 4), '')
-	AND YEAR(HIRE_DATE) = RIGHT(diaeano, 4)
-    INTO total_hire;
-    RETURN total_hire;
+MONTH(HIRE_DATE) = REPLACE(diaeano, RIGHT(diaeano, 4), '')
+AND YEAR(HIRE_DATE) = RIGHT(diaeano, 4)
+INTO total_hire;
+RETURN total_hire;
 END $$
-
 DELIMITER ;
