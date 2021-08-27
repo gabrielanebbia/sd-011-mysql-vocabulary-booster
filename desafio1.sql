@@ -5,4 +5,4 @@ IF(REGION_ID = 1,
 'não incluído') AS 'Status inclusão'
 FROM
 hr.countries
-ORDER BY COUNTRY_NAME;
+ORDER BY País;
