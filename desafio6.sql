@@ -11,7 +11,7 @@ FROM hr.departments
 WHERE JH.DEPARTMENT_ID = DEPARTMENT_ID
 ) AS 'Departamento'
 FROM hr.employees E
-RIGHT JOIN hr.job_history JH
+INNER JOIN hr.job_history JH
 ON E.EMPLOYEE_ID = JH.EMPLOYEE_ID
 ORDER BY CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME) DESC,
 (
