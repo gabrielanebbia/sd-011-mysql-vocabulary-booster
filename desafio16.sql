@@ -1,6 +1,6 @@
 DELIMITER $$
 
-CREATE PROCEDURE buscar_quantidade_de_empregos_por_funcionario(IN email VARCHAR(50))
+CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(IN email VARCHAR(50))
 BEGIN
   SELECT COUNT(JH.EMPLOYEE_ID)
   FROM job_history AS JH
