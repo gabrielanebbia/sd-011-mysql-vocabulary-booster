@@ -1,5 +1,4 @@
-SELECT
-  CONCAT(worker.first_name, ' ', worker.last_name) AS 'Nome completo funcionário 1',
+SELECT CONCAT(worker.first_name, ' ', worker.last_name) AS 'Nome completo funcionário 1',
   worker.salary AS 'Salário funcionário 1',
   worker.phone_number AS 'Telefone funcionário 1',
   CONCAT(comparison.first_name, ' ', comparison.last_name) AS 'Nome completo funcionário 2',
