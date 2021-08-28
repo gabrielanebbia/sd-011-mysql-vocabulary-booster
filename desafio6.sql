@@ -9,4 +9,4 @@ INNER JOIN hr.jobs AS jobs
 ON jobs.JOB_ID = job.JOB_ID
 LEFT JOIN hr.departments AS dep
 ON dep.DEPARTMENT_ID = job.DEPARTMENT_ID
-ORDER BY emp.FIRST_NAME DESC, Cargo ASC;
+ORDER BY CONCAT(emp.first_name, ' ', emp.last_name) DESC, Cargo ASC;
