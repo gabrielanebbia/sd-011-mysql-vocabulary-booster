@@ -1,11 +1,3 @@
-SELECT * FROM w3schools.customers;
-SELECT * FROM w3schools.orders;
-SELECT * FROM w3schools.order_details;
-SELECT * FROM employees;
-SELECT * FROM w3schools.products;
-SELECT * FROM w3schools.suppliers;
-
-
 SELECT 
 c.ContactName AS 'Nome',
 c.Country AS 'País',
