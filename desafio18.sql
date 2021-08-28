@@ -1,11 +1,7 @@
 SELECT
 CONCAT(FIRST_NAME, ' ', LAST_NAME) AS 'Nome completo',
-CONCAT(
-DAY(START_DATE), '/', MONTH(START_DATE), '/', YEAR(START_DATE)
-) AS 'Data de início',
-CONCAT(
-DAY(END_DATE), '/', MONTH(END_DATE), '/', YEAR(END_DATE)
-) AS 'Data de rescisão',
+DATE_FORMAT(START_DATE, '%d/%m/%Y') AS 'Data de início',
+DATE_FORMAT(END_DATE, '%d/%m/%Y') AS 'Data de rescisão',
 ROUND(DATEDIFF(END_DATE, START_DATE) / 365, 2) AS 'Anos trabalhados'
 FROM
 hr.employees AS e
