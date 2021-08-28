@@ -1,8 +1,8 @@
 SELECT
-  CONCAT(E.FirstName, ' ', E.LastName) AS `Nome Completo`,
+  CONCAT(employees.FirstName, ' ', employees.LastName) AS `Nome Completo`,
   COUNT(*) AS `Total de pedidos`
-FROM employees AS E
-INNER JOIN orders AS O
-  ON E.EmployeeID = O.EmployeeID
-GROUP BY E.EmployeeID
+FROM employees AS employees
+INNER JOIN orders AS orders
+  ON employees.EmployeeID = orders.EmployeeID
+GROUP BY employees.EmployeeID
 ORDER BY `Total de pedidos`;
