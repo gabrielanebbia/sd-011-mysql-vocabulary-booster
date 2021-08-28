@@ -9,7 +9,7 @@ BEGIN
   (
     SELECT DEPARTMENT_NAME
     FROM hr.departments AS d
-    WHERE e.DEPARTMENT_ID = d.DEPARTMENT_ID
+    WHERE h.DEPARTMENT_ID = d.DEPARTMENT_ID
   ) AS `Departamento`,
   (
     SELECT JOB_TITLE
