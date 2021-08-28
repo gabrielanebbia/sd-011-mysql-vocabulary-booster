@@ -8,7 +8,7 @@ WHERE job_id IN (
 SELECT job_id
 FROM hr.jobs
 WHERE job_title = position_name
-	);
+);
 END $$
 
 DELIMITER;
