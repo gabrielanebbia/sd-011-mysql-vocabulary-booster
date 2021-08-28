@@ -4,7 +4,7 @@ CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(employeeEmail VARC
 RETURNS INT READS SQL DATA
 BEGIN
 DECLARE qty_jobs INT;
-SELECT COUNT(JOB_ID)
+SELECT COUNT(JOB_ID) INTO qty_jobs
 FROM hr.employees AS e
 INNER JOIN
 hr.job_history AS jh

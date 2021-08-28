@@ -1,9 +1,9 @@
 DELIMITER $$ 
 
 CREATE PROCEDURE buscar_media_por_cargo(
-IN jobTitle VARCHAR(300), OUT avgSalary DOUBLE)
+INOUT jobTitle VARCHAR(300))
 BEGIN
-SELECT AVG(SALARY) INTO avgSalary
+SELECT AVG(SALARY) INTO jobTitle
 FROM
 hr.employees AS e
 INNER JOIN
