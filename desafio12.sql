@@ -10,4 +10,3 @@ FROM
   hr.employees AS comparison
 WHERE worker.job_id = comparison.job_id AND worker.employee_id <> comparison.employee_id
 ORDER BY `Nome completo funcionário 1`, `Nome completo funcionário 2`;
-
