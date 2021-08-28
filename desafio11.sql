@@ -1,7 +1,7 @@
 SELECT
 t2.ContactName AS 'Nome',
 t2.Country AS 'País',
-.country_count - 1 AS 'Número de compatriotas'
+t1.country_count - 1 AS 'Número de compatriotas'
 FROM (
 SELECT
 COUNT(*) as country_count,
