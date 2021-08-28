@@ -7,10 +7,10 @@ FROM
 employees AS e
 INNER JOIN
 jobs AS j
-ON j.job_id = jh.job_id
+ON j.job_id = e.job_id
 INNER JOIN
 job_history AS jh
-ON j.job_id = e.job_id
+ON jh.job_id = e.job_id
 INNER JOIN
 departments AS d
 ON e.department_id = d.department_id

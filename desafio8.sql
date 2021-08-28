@@ -5,8 +5,10 @@ o.OrderDate AS 'Data do pedido'
 FROM
 customers AS c
 INNER JOIN
-orders AS o ON c.CustomerID = o.CustomerID
+orders AS o
+ON c.CustomerID = o.CustomerID
 INNER JOIN
-shippers AS s ON s.ShipperID = o.ShipperID
+shippers AS s
+ON s.ShipperID = o.ShipperID
 HAVING s.ShipperName != 'Federal Shipping'
 ORDER BY `Nome de contato` , `Empresa que fez o envio`, `Data do pedido`;

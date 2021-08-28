@@ -7,5 +7,5 @@ employees AS e
 LEFT JOIN
 job_history AS jh ON e.employee_id = jh.employee_id
 WHERE
-MONTH(jh.start_date) >= 3
+MONTH(jh.start_date) BETWEEN 1 AND 3
 ORDER BY `Nome completo` , jh.start_date;
