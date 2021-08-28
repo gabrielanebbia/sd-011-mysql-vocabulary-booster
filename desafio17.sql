@@ -1,0 +1,10 @@
+DELIMITER $$
+
+CREATE TRIGGER trigger_insert_currentOrderDate
+  BEFORE INSERT ON orders
+  FOR EACH ROW
+BEGIN
+  SET NEW.OrderDate = CURRENT_DATE();
+END $$
+
+DELIMITER ;
