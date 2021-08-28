@@ -1,3 +1,5 @@
+USE hr;
+
 SELECT
 j.job_title as Cargo, ROUND(AVG(e.salary), 2) as "Média salarial",
 CASE
@@ -9,5 +11,5 @@ END AS "Senioridade"
 FROM hr.employees AS e
 INNER JOIN hr.jobs AS j
 ON e.JOB_ID = j.JOB_ID
-GROUP BY j.JOB_TITLE
-ORDER BY 2 ASC, j.JOB_TITLE;
+GROUP BY j.job_id
+ORDER BY "Média salarial" ASC, j.JOB_TITLE;
