@@ -4,5 +4,5 @@ SELECT
   CONCAT(DAY(job_history.END_DATE), '/', MONTH(job_history.END_DATE), '/', YEAR(job_history.END_DATE)) AS `Data de rescisão`,
   ROUND(DATEDIFF(job_history.START_DATE, job_history.END_DATE) / 365, 2) AS `Anos trabalhados`
 FROM job_history AS job_history
-  INNER JOIN employees AS employess ON job_history.EMPLOYEE_ID = employees.EMPLOYEE_ID
+  INNER JOIN employees AS employees ON job_history.EMPLOYEE_ID = employees.EMPLOYEE_ID
 ORDER BY `Nome completo` , `Anos trabalhados`;
