@@ -1,5 +1,5 @@
 SELECT UCASE(CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME)) AS `Nome completo`,
-JH.START_DATE AS `Data de início do cargo`,
+JH.START_DATE AS `Data de início`,
 E.SALARY AS `Salário`
 FROM employees AS E
 INNER JOIN job_history AS JH ON E.EMPLOYEE_ID= JH.EMPLOYEE_ID
