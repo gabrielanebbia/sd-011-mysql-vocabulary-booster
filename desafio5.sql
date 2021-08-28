@@ -4,5 +4,4 @@ SELECT
     ROUND(MIN_SALARY / 12, 2) AS "Média mínima mensal",
     ROUND(MAX_SALARY / 12, 2) AS "Média máxima mensal"
 FROM hr.jobs
-GROUP BY Cargo
 ORDER BY jobs.MAX_SALARY - jobs.MIN_SALARY ASC, Cargo ASC;
