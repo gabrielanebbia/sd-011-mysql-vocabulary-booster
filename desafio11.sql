@@ -6,7 +6,7 @@ SELECT
         FROM
             w3schools.customers AS customersCount
         GROUP BY customersCount.Country
-        HAVING customers.Country = customersCount.Country) AS `Número de compatriotas`
+        HAVING customers.Country = customersCount.Country) AS 'Número de compatriotas'
 FROM
     w3schools.customers
     WHERE (SELECT 
