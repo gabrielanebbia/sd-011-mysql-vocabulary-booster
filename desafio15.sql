@@ -10,5 +10,5 @@ INNER JOIN hr.jobs AS t2
 ON t1.JOB_ID = t2.JOB_ID
 WHERE t2.JOB_TITLE = cargo
 GROUP BY `Média salarial`;
- END $$
+END $$
 DELIMITER ;
