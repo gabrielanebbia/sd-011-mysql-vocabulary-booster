@@ -19,7 +19,7 @@ INNER JOIN
 hr.departments AS departments ON departments.DEPARTMENT_ID = job_history.DEPARTMENT_ID
 INNER JOIN
 hr.jobs AS jobs ON jobs.JOB_ID = job_history.JOB_ID
-WHERE employees.EMAIL = 'NKOCHHAR'
+WHERE employees.EMAIL = email
 ORDER BY Departamento, Cargo;
 END $$
 DELIMITER ;
