@@ -1,6 +1,6 @@
 DELIMITER $$
 
-CREATE PROCEDURE 'buscar_media_por_cargo'(IN position_name VARCHAR(100))
+CREATE PROCEDURE buscar_media_por_cargo(IN position_name VARCHAR(100))
 BEGIN
 SELECT ROUND(AVG(salary), 2) AS 'Média salarial'
 FROM hr.employees
@@ -11,4 +11,4 @@ WHERE job_title = position_name
 );
 END $$
 
-DELIMITER;
+DELIMITER ;
