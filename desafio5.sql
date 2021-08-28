@@ -4,4 +4,4 @@ ROUND((MIN_SALARY/12),2) AS 'Média mínima mensal',
 ROUND((MAX_SALARY/12),2) AS 'Média máxima mensal'
 FROM hr.jobs
 GROUP BY Cargo
-ORDER BY `Variação Salarial` ASC, Cargo ASC;
+ORDER BY 'Variação Salarial' ASC, Cargo ASC;
