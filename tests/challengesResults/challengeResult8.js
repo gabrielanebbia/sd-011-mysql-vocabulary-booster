@@ -1,5 +1,4 @@
-const challengeResult8 = [
-  {
+const challengeResult8 = [{
     'Nome de contato': 'Alejandra Camino',
     'Empresa que fez o envio': 'Speedy Express',
     'Data do pedido': '1996-08-14'
