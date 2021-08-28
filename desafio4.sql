@@ -11,4 +11,3 @@ SELECT j.JOB_TITLE AS 'Cargo',
             LEFT JOIN hr.employees e ON j.JOB_ID = e.JOB_ID
             GROUP BY j.JOB_TITLE
             ORDER BY ROUND(AVG(e.salary), 2) ASC ,j.JOB_TITLE;
-            
