@@ -1,0 +1,8 @@
+DELIMITER $$
+CREATE TRIGGER trigger_orders_insert
+BEFORE INSERT ON w3schools.orders
+FOR EACH ROW
+BEGIN
+SET NEW.OrderDate = SUBSTRING(NOW(), 1, 10);
+END $$
+DELIMITER ;
