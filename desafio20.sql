@@ -9,7 +9,7 @@ FROM hr.job_history AS jobHistory
 LEFT JOIN hr.employees AS employees
 ON jobHistory.EMPLOYEE_ID = employees.EMPLOYEE_ID
 INNER JOIN hr.departments AS departments
-ON departments.DEPARTMENT_ID = employees.DEPARTMENT_ID
+ON departments.DEPARTMENT_ID = jobHistory.DEPARTMENT_ID
 INNER JOIN hr.jobs AS jobs
 ON jobHistory.JOB_ID = jobs.JOB_ID
 WHERE employees.EMAIL = email
