@@ -5,4 +5,3 @@ hr.countries AS P
 INNER JOIN
 hr.regions AS S ON P.REGION_ID = S.REGION_ID
 ORDER BY P.COUNTRY_NAME ASC;
-    
