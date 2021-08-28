@@ -1,4 +1,3 @@
-
 DELIMITER $$
 CREATE PROCEDURE buscar_quantidade_de_empregos_por_funcionario(IN email VARCHAR(100))
 BEGIN
