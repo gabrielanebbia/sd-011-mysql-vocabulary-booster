@@ -1,14 +1,10 @@
 SELECT ContactName AS 'Nome',
 Country AS 'País',
-(SELECT Count(Country) 
+(SELECT Count(Country) - 1 
 FROM customers
 GROUP BY Country
 HAVING Country = `País`
 ) AS 'Número de compatriotas'
-FROM customers ORDER BY `Nome`;
-
-
-SELECT * FROM order_details;
-SELECT * FROM customers;
-SELECT * FROM orders;
-SELECT * FROM shippers;
+FROM customers 
+HAVING `Número de compatriotas` > 0 
+ORDER BY `Nome`;
