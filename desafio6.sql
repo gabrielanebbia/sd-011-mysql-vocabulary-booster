@@ -10,4 +10,4 @@ INNER JOIN hr.job_history AS jh
 ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID
 INNER JOIN hr.departments AS dep
 ON e.DEPARTMENT_ID = dep.DEPARTMENT_ID
-ORDER BY 1 ASC, 2 ASC;
+ORDER BY 'Nome completo' ASC, Cargo ASC;
