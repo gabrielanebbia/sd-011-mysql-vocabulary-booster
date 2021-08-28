@@ -10,4 +10,5 @@ FROM w3schools.customers
 GROUP BY Country
 ) AS t1
 INNER JOIN w3schools.customers AS t2 ON  t1.Country = t2.Country
+WHERE t1.country_count > 1
 ORDER BY t2.ContactName;
