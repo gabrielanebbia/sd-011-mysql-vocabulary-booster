@@ -8,3 +8,4 @@ WHERE JOB_TITLE = nome_do_cargo
 GROUP BY JOB_TITLE;
 END $$
 DELIMITER ;
+CALL buscar_media_por_cargo('Programmer');
