@@ -8,14 +8,10 @@
 -- A quarta deve possuir o alias "Média máxima mensal" e exibir o salário máximo mensal daquele cargo. Arredonde a média com uma precisão de duas casas decimais.
 -- Os resultados devem estar ordenados pela variação salarial em ordem crescente.
 -- Em caso de empate na variação, os resultados devem ser ordenados pelo nome do cargo em ordem alfabética.
-
--- SELECT * FROM hr.jobs;
-SELECT * FROM hr.employees;
-SELECT JOB_TITLE AS Cargo FROM hr.jobs;
-
-SELECT JOB_TITLE AS Cargo, (MAX_SALARY - MIN_SALARY) AS `Variação Salarial`
-FROM hr.jobs ;
-SELECT JOB_TITLE AS Cargo,  ROUND((MIN_SALARY DIV 12), 2) AS `Média mínima mensal`
-FROM hr.jobs ;
-SELECT JOB_TITLE AS Cargo,  ROUND((MAX_SALARY DIV 12)) AS `Média mínima mensal`
-FROM hr.jobs ;
+SELECT DISTINCT JOB_TITLE AS Cargo,
+ROUND(AVG(MAX_SALARY - MIN_SALARY)) AS `Variação Salarial`,
+ROUND(AVG(MIN_SALARY) / 12, 2) AS `Média mínima mensal`,
+ROUND(AVG(MAX_SALARY) / 12, 2) AS `Média máxima mensal`
+FROM hr.jobs 
+GROUP BY JOB_TITLE
+ORDER BY ROUND(AVG(MAX_SALARY - MIN_SALARY), 2), JOB_TITLE;
