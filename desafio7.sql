@@ -1,5 +1,3 @@
-select * from hr.employees;
-select * from job_history;
 SELECT
 UCASE(CONCAT(employees.FIRST_NAME, ' ', employees.LAST_NAME)) AS "Nome completo",
 job_history.START_DATE AS "Data de início",
