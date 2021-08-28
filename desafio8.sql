@@ -1,8 +1,3 @@
-select * from w3schools.customers; -- CustomerID 
-select * from w3schools.shippers; -- ShipperID
-select * from w3schools.products; -- ProductID SupplierID CategoryID
-select * from w3schools.order_details; -- OrderDetailID, OrderID ProductID
-select * from w3schools.orders; -- OrderID CustomerID ShipperID
 SELECT
 customers.ContactName AS "Nome de contato",
 shippers.ShipperName AS "Empresa que fez o envio",
