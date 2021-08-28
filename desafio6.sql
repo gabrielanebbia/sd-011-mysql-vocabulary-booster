@@ -6,9 +6,9 @@ FROM hr.employees AS employees
 INNER JOIN hr.job_history AS job_history
 ON employees.EMPLOYEE_ID = job_history.EMPLOYEE_ID
 INNER JOIN hr.departments AS departments
-ON employees.DEPARTMENT_ID = departments.DEPARTMENT_ID
+ON job_history.DEPARTMENT_ID = departments.DEPARTMENT_ID
 INNER JOIN hr.jobs AS jobs
-ON jobs.JOB_ID = employees.JOB_ID
+ON jobs.JOB_ID = job_history.JOB_ID
 ORDER BY
 CONCAT(employees.FIRST_NAME, " ", employees.LAST_NAME) DESC,
 jobs.JOB_TITLE ASC;
