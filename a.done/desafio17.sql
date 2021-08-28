@@ -1,0 +1,12 @@
+DELIMITER $$
+
+CREATE TRIGGER Insert_time
+BEFORE INSERT ON orders
+FOR EACH ROW
+BEGIN
+SET NEW.OrderDate = DATE(NOW()),
+NEW.CustomerID = 4,
+NEW.EmployeeID = 2,
+NEW.ShipperID = 2;
+END $$
+DELIMITER ;
