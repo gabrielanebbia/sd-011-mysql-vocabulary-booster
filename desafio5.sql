@@ -1,6 +1,6 @@
 SELECT JOB_TITLE AS 'Cargo',
 MAX_SALARY - MIN_SALARY AS 'Variação Salarial',
-CONVERT(MIN_SALARY DIV 12, DECIMAL(10,2)) AS 'Média mínima mensal',
-CONVERT(MAX_SALARY DIV 12, DECIMAL(10,2)) AS 'Média máxima mensal'
+CONVERT(MIN_SALARY / 12, DECIMAL(10,2)) AS 'Média mínima mensal',
+CONVERT(MAX_SALARY / 12, DECIMAL(10,2)) AS 'Média máxima mensal'
 FROM hr.jobs
 ORDER BY MAX_SALARY - MIN_SALARY, JOB_TITLE ASC ;
