@@ -8,7 +8,7 @@
 #A quarta deve deve possuir o alias "Média" e exibir a média de quantidade nos pedidos deste produto, arredondada para duas casas decimais.
 #Os resultados devem estar ordenados pela média de quantidade nos pedidos em ordem crescente.
 #Em caso de empate na média, os resultados devem ser ordenados pelo nome do produto em ordem alfabética.
-SELECT p.ProductName, 
+SELECT p.ProductName AS "Produto", 
 MIN(od.Quantity) AS "Mínima", 
 MAX(od.Quantity) AS "Máxima", 
 ROUND(AVG(od.Quantity),2) AS `Média` 
