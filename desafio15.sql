@@ -1,8 +1,8 @@
-ELIMITER $$ 
+DELIMITER $$ 
 
-CREATE PROCEDURE buscar_media_por_cargo(INOUT jobTitle VARCHAR(300))
+CREATE PROCEDURE buscar_media_por_cargo(IN jobTitle VARCHAR(300))
 BEGIN
-SELECT AVG(SALARY) INTO jobTitle
+SELECT ROUND(AVG(SALARY), 2) AS 'Média salarial'
 FROM
 hr.employees AS e
 INNER JOIN
