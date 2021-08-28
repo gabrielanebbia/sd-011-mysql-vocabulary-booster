@@ -1,4 +1,4 @@
-SELECT DISTINCT
+SELECT
 CONCAT(t1.FIRST_NAME, ' ' ,t1.LAST_NAME) AS `Nome completo funcionário 1`,
 t1.SALARY AS `Salário funcionário 1`,
 t1.PHONE_NUMBER AS `Telefone funcionário 1`,
