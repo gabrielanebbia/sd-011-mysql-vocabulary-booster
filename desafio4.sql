@@ -12,4 +12,4 @@ FROM
         INNER JOIN
     hr.employees AS e ON j.JOB_ID = e.JOB_ID
 GROUP BY 1
-ORDER BY 2;
+ORDER BY 2, 1;

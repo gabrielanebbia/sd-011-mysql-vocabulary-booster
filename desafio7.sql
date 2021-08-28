@@ -8,4 +8,4 @@ FROM
     hr.employees AS e ON jh.EMPLOYEE_ID = e.EMPLOYEE_ID
 WHERE
     MONTH(jh.start_date) <= 3
-ORDER BY 1;
+ORDER BY 1, 2;

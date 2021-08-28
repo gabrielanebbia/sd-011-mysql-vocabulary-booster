@@ -10,4 +10,4 @@ FROM
     w3schools.shippers AS s ON s.ShipperID = o.ShipperID
 WHERE
     s.ShipperID <= 2
-ORDER BY 1 , 2 , 3 DESC;
+ORDER BY 1 , 2 , 3;
