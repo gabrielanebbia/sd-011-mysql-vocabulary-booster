@@ -1,6 +1,6 @@
 DELIMITER $$
 
-CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(emailEmployeer INT)
+CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(emailEmployeer VARCHAR(100))
 RETURNS INT READS SQL DATA
 BEGIN
 DECLARE quantityJobs INT;
