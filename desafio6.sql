@@ -4,7 +4,7 @@ SELECT CONCAT(employees.FIRST_NAME, " ", employees.LAST_NAME) AS "Nome completo"
         departments.DEPARTMENT_NAME AS "Departamento"
 FROM hr.employees AS employees
 INNER JOIN hr.job_history AS job_history
-ON employees.JOB_ID = job_history.JOB_ID
+ON employees.EMPLOYEE_ID = job_history.EMPLOYEE_ID
 INNER JOIN hr.departments AS departments
 ON employees.DEPARTMENT_ID = departments.DEPARTMENT_ID
 INNER JOIN hr.jobs AS jobs
