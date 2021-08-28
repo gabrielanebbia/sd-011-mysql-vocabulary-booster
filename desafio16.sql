@@ -19,4 +19,3 @@ RETURN JobsQty;
 END$$
 
 DELIMITER ;
-
