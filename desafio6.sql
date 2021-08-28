@@ -6,12 +6,12 @@ d.department_name AS 'Departamento'
 FROM
 employees AS e
 INNER JOIN
-jobs AS j
-ON j.job_id = e.job_id
-INNER JOIN
 job_history AS jh
-ON jh.job_id = e.job_id
+ON e.job_id = jh.job_id
+INNER JOIN
+jobs AS j
+ON jh.job_id = j.job_id
 INNER JOIN
 departments AS d
-ON e.department_id = d.department_id
-ORDER BY `Nome completo` DESC , `Cargo` ASC;
+ON jh.department_id = d.department_id
+ORDER BY CONCAT(e.first_name, ' ', e.last_name) DESC, j.job_title ASC;
