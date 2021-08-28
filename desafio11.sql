@@ -1,27 +1,14 @@
-SELECT P.ProductName AS 'Produto',
+SELECT C1.ContactName AS 'Nome',
+C1.Country AS 'País',
 (
-SELECT MIN(Quantity)
-FROM w3schools.order_details
-WHERE P.ProductID = ProductID
-) AS 'Mínima',
-(
-SELECT MAX(Quantity)
-FROM w3schools.order_details
-WHERE P.ProductID = ProductID
-) AS 'Máxima',
-(
-SELECT ROUND(AVG(Quantity), 2)
-FROM w3schools.order_details
-WHERE P.ProductID = ProductID
-) AS 'Média'
-FROM w3schools.products P
+SELECT COUNT(*) -1
+FROM w3schools.customers
+WHERE C1.Country = Country
+) AS 'Número de compatriotas'
+FROM w3schools.customers C1
 WHERE (
-SELECT AVG(Quantity)
-FROM w3schools.order_details
-WHERE P.ProductID = ProductID
-) > 20
-ORDER BY (
-SELECT AVG(Quantity)
-FROM w3schools.order_details
-WHERE P.ProductID = ProductID
-);
+SELECT COUNT(*) -1
+FROM w3schools.customers
+WHERE C1.Country = Country
+) > 0
+ORDER BY C1.ContactName;
