@@ -1,11 +1,10 @@
-SELECT
-DISTINCT c.country AS 'País'
-FROM
-customers AS c
-UNION ALL
-SELECT
-DISTINCT s.country
-FROM
-suppliers AS s
-ORDER BY `País`
-LIMIT 5;
+DELIMITER $$
+CREATE PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(100))
+BEGIN
+SELECT AVG(e.salary)
+FROM employees AS e
+INNER JOIN jobs AS j
+ON e.job_id = j.job_id
+WHERE j.job_title LIKE cargo;
+END $$
+DELIMITER ;
