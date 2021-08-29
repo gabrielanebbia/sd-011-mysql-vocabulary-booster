@@ -1,7 +1,7 @@
 USE banco_de_dados; 
 DELIMITER $$ 
 
-CREATE PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(100) , OUT média_salarial VARCHAR(100)) 
+CREATE PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(100)) 
 BEGIN
 SELECT
 ROUND(AVG(e.SALARY), 2) AS "Média salarial"
