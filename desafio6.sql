@@ -6,11 +6,15 @@
 -- A quarta deve possuir o alias "Departamento" e mostrar o nome do departamento em que a pessoa exerceu seu cargo.
 -- Os resultados devem estar ordenados pelo nome completo das pessoas empregadas em ordem decrescente.
 -- Em caso de empate no nome completo, ordene os resultados pelo nome do cargo em ordem alfabética.
-
-SELECT * FROM hr.jobs;
-SELECT * FROM hr.job_history;
-SELECT * FROM hr.employees;
-SELECT CONCAT(FIRST_NAME,' ', LAST_NAME),
-(SELECT JOB_TITLE FROM hr.jobs WHERE hr.jobs.JOB_ID = `Nome completo`.JOB_ID 
- ) AS `Cargo` 
- FROM hr.employees AS `Nome completo`;
+SELECT CONCAT(emp.FIRST_NAME,' ', emp.LAST_NAME) AS `Nome completo`, 
+job.JOB_TITLE  AS Cargo,
+jhis.START_DATE AS `Data de início do cargo`,
+d.DEPARTMENT_NAME AS Departamento
+FROM hr.employees AS emp
+INNER JOIN hr.job_history AS jhis
+ON jhis.EMPLOYEE_ID = emp.EMPLOYEE_ID
+INNER JOIN departments AS d
+ON d.DEPARTMENT_ID = jhis.DEPARTMENT_ID
+INNER JOIN hr.jobs AS job
+ON jhis.JOB_ID = job.JOB_ID
+ORDER BY CONCAT(emp.FIRST_NAME,' ', emp.LAST_NAME) DESC, Cargo;
