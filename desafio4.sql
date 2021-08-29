@@ -11,5 +11,4 @@ INNER JOIN hr.employees AS emp
 ON jobs.JOB_ID = emp.JOB_ID
 GROUP BY jobs.JOB_TITLE
 ORDER BY ROUND(AVG(emp.SALARY), 2), Cargo;
-
 -- Reference: https://www.w3schools.com/sql/func_sqlserver_round.asp

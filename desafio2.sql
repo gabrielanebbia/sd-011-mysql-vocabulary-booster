@@ -7,5 +7,4 @@ ELSE 'Baixo'
 END as 'Nível'
 FROM hr.jobs
 ORDER BY Cargo ASC;
-
 -- Programmer = Baixo :(
