@@ -4,5 +4,5 @@ FROM w3schools.products p
 INNER JOIN w3schools.order_details od
 ON od.ProductID = p.ProductID
 WHERE od.Quantity > 80
-GROUP BY ProductName
+GROUP BY ProductName, Price
 ORDER BY ProductName;
