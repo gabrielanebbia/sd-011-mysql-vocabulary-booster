@@ -8,7 +8,6 @@ INNER JOIN
 hr.employees AS B ON B.JOB_ID = med.JOB_ID
 INNER JOIN
 hr.jobs AS job ON job.JOB_ID = med.JOB_ID
-WHERE job.JOB_TITLE = jobs
-GROUP BY med.JOB_ID;
+WHERE job.JOB_TITLE = jobs;
 END $$
 DELIMITER ;
