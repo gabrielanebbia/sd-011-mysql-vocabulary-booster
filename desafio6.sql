@@ -10,5 +10,4 @@ ON dp.DEPARTMENT_ID = jbh.DEPARTMENT_ID
 INNER JOIN hr.employees AS emp
 ON emp.EMPLOYEE_ID = jbh.EMPLOYEE_ID
 ORDER BY CONCAT(emp.FIRST_NAME, ' ', emp.LAST_NAME) DESC, jb.JOB_TITLE ASC;
-
 -- jb = jobs, jbh = job history, dp = departaments, emp = employees;
