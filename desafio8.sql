@@ -1,0 +1,13 @@
+SELECT 
+cust.ContactName AS 'Nome de contato',
+shp.ShipperName AS 'Empresa que fez o envio',
+ord.OrderDate AS 'Data do pedido'
+FROM
+w3schools.customers AS cust
+INNER JOIN
+w3schools.orders AS ord ON cust.CustomerID = ord.CustomerID
+INNER JOIN
+w3schools.shippers AS shp ON ord.ShipperID = shp.ShipperID
+WHERE
+shp.ShipperName IN ('Speedy Express' , 'United Package')
+ORDER BY `Nome de contato` , `Empresa que fez o envio` , `Data do pedido`;
