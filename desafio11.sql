@@ -1,7 +1,7 @@
 SELECT ContactName AS 'Nome',
 Country AS 'País',
 (
-SELECT COUNT(*) - 1
+SELECT COUNT(Country) - 1
 FROM w3schools.customers
 GROUP BY Country
 HAVING Country = `País`
