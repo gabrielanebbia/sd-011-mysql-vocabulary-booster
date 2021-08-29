@@ -6,4 +6,4 @@ ROUND(DATEDIFF(JH.END_DATE, JH.START_DATE) / 365, 2) AS `Anos trabalhados`
 FROM hr.job_history AS JH
 INNER JOIN hr.employees AS E
 ON E.EMPLOYEE_ID = JH.EMPLOYEE_ID
-ORDER BY CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME), DATEDIFF(JH.END_DATE, JH.START_DATE) / 365;
+ORDER BY `Nome completo`, `Anos trabalhados`;
