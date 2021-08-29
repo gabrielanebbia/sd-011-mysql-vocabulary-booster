@@ -9,6 +9,5 @@ hr.job_history AS jh
         INNER JOIN
         hr.employees AS e ON jh.EMPLOYEE_ID = e.EMPLOYEE_ID
         WHERE email = e.EMAIL INTO QUANTIDADE;
-        RETURN TOTAL;
-END $$
+        RETURN QUANTIDADE;
 DELIMITER ;
