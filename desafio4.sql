@@ -9,4 +9,4 @@ FROM hr.jobs AS job
 INNER JOIN hr.employees AS employ
 ON job.JOB_ID = employ.JOB_ID
 GROUP BY(job.JOB_TITLE)
-ORDER BY 2 ASC;
+ORDER BY 2 ASC, 1 ASC;
