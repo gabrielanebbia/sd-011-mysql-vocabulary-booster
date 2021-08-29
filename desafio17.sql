@@ -1,12 +1,11 @@
 USE w3schools;
 
 DELIMITER $$
-CREATE TRIGGER trigger_perfil_insert
+CREATE TRIGGER trigger_orders_insert
     BEFORE INSERT ON orders
     FOR EACH ROW
 BEGIN
-    INSERT INTO orders(CustomerID, EmployeeID, ShipperID)
-    VALUES(4, 2, 2)
+   SET NEW.OrderDate = NOW();
 END $
 DELIMITER ;
 
