@@ -1,6 +1,6 @@
 SELECT C.ContactName AS `Nome de contato`,
 S.ShipperName AS `Empresa que fez o envio`,
-OrderDate AS `Data do pedido`
+O.OrderDate AS `Data do pedido`
 FROM customers AS C
 INNER JOIN orders AS O ON C.CustomerID = O.CustomerID
 INNER JOIN shippers AS S ON O.ShipperID = S.ShipperID
