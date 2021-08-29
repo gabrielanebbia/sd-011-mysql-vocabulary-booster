@@ -9,5 +9,3 @@ GROUP BY p.ProductName
 HAVING ROUND(AVG(od.Quantity), 2) > 20
 ORDER BY ROUND(AVG(od.Quantity), 2),
 p.ProductName;
-
--- SELECT * FROM w3schools.products;
