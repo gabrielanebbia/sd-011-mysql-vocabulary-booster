@@ -6,4 +6,5 @@ FROM w3schools.order_details AS OD
 INNER JOIN w3schools.products AS P
 ON P.ProductID = OD.ProductID
 GROUP BY OD.ProductID
+HAVING AVG(OD.Quantity) > 20
 ORDER BY AVG(OD.Quantity) ASC, P.ProductName ASC;
