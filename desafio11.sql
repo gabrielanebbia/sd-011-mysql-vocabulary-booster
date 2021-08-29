@@ -1,0 +1,10 @@
+-- SELECT * FROM categories;
+-- SELECT * FROM customers;
+-- SELECT * FROM order_details;
+-- SELECT * FROM products;
+-- SELECT * FROM employees;
+-- SELECT * FROM shippers;
+-- SELECT * FROM suppliers;
+-- SELECT * FROM w3schools.customers;
+-- SELECT * FROM w3schools.orders;
+-- SELECT * FROM w3schools.shippers;
