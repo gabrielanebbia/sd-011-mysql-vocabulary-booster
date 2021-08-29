@@ -1,4 +1,3 @@
-SELECT * FROM w3schools.customers;
 SELECT cust.ContactName AS "Nome",
 cust.Country AS "País",
 COUNT(cust2.CustomerID) AS "Número de compatriotas"
