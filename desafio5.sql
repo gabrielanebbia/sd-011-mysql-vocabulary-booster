@@ -1,5 +1,3 @@
--- Reference: https://www.w3schools.com/sql/func_sqlserver_round.asp
-
 SELECT JOB_TITLE AS 'Cargo',
 (MAX_SALARY - MIN_SALARY) AS 'Variação Salarial',
 ROUND(MIN_SALARY / 12, 2) AS 'Média mínima mensal',
