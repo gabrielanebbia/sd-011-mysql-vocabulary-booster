@@ -1,7 +1,7 @@
 SELECT
 C.ContactName AS "Nome",
 C.Country AS "País",
-(PESSOAS_POR_PAIS.QNT -1)
+(PESSOAS_POR_PAIS.QNT -1) AS  "Número de compatriotas" 
 FROM 
 w3schools.customers AS C
 INNER JOIN 	
