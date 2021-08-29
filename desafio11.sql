@@ -16,7 +16,8 @@ Country AS `País`,
 (SELECT COUNT(Country)
 FROM w3schools.customers
 WHERE w3schools.customers.Country = cus1.Country 
-AND w3schools.customers.CustomerID <> cus1.CustomerID) AS `Número de compatriotas`
+AND w3schools.customers.CustomerID <> cus1.CustomerID)
+AS `Número de compatriotas`
 FROM w3schools.customers AS cus1
 HAVING `Número de compatriotas` > 0
 ORDER BY `Nome`;
