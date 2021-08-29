@@ -5,4 +5,3 @@ FROM w3schools.customers AS t2 WHERE (t1.Country = t2.Country)) - 1) AS `Número
 FROM w3schools.customers AS t1
 HAVING `Número de compatriota` > 1
 ORDER BY Nome ASC;
-

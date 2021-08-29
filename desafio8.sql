@@ -6,4 +6,3 @@ INNER JOIN w3schools.customers AS t2 ON t1.CustomerID = t2.CustomerID
 INNER JOIN w3schools.shippers AS t3 ON t1.ShipperID = t3.ShipperID
 WHERE t1.ShipperID LIKE 1 OR t1.ShipperID Like 2
 ORDER BY t2.ContactName, t3.ShipperName, t1.OrderDate ASC;
-

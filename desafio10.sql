@@ -7,4 +7,3 @@ INNER JOIN w3schools.order_details AS t2 ON t1.ProductID = t2.ProductID
 GROUP BY ProductName
 HAVING AVG(t2.Quantity) > 20
 ORDER BY Média, Produto ASC;
-
