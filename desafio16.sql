@@ -1,4 +1,3 @@
-USE hr;
 DELIMITER $$
 
 CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario (email VARCHAR(100))
@@ -13,3 +12,4 @@ RETURN COUNT(job.EMPLOYEE_ID);
 END $$
 
 DELIMITER ;
+
