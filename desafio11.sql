@@ -5,4 +5,3 @@ t1.Country AS País,
 FROM w3schools.customers AS t1
 WHERE (SELECT COUNT(country) FROM w3schools.customers GROUP BY country HAVING country = t1.country) - 1 > 0
 ORDER BY t1.CustomerName ASC;
-
