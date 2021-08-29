@@ -6,8 +6,8 @@ CONCAT(employee_two.FIRST_NAME, ' ', employee_two.LAST_NAME) AS 'Nome completo f
 employee_two.SALARY AS 'Salário funcionário ',
 employee_two.PHONE_NUMBER AS 'Telefone funcionário 2'
 FROM
-hr.employees AS employee_one,
-hr.employees AS employee_two
-WHERE employee_one.JOB_ID = employee_two.JOB_ID
+hr.employees AS employee_one
+LEFT JOIN hr.employees AS employee_two
+ON employee_one.JOB_ID = employee_two.JOB_ID
 AND employee_one.EMPLOYEE_ID <> employee_two.EMPLOYEE_ID
 ORDER BY `Nome completo funcionário 1`ASC, `Nome completo funcionário 2`;
