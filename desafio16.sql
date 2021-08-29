@@ -1,6 +1,5 @@
 USE hr;
 DELIMITER $$
-
 CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(numberEmployees VARCHAR(30))
 RETURNS INT READS SQL DATA
 BEGIN
@@ -12,7 +11,5 @@ ON employees.EMPLOYEE_ID = job_history.EMPLOYEE_ID
 WHERE EMAIL = numberEmployees;
 RETURN TEST;
 END $$
-
 DELIMITER ;
-
 SELECT buscar_quantidade_de_empregos_por_funcionario("NKOCHHAR");
