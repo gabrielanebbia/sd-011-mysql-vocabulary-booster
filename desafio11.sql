@@ -1,7 +1,7 @@
 -- SELECT * FROM categories;
 -- SELECT * FROM customers;
 -- SELECT * FROM order_details;
--- SELECT * FROM products;
+--  SELECT * FROM w3schools.products;
 -- SELECT * FROM employees;
 -- SELECT * FROM shippers;
 -- SELECT * FROM suppliers;
