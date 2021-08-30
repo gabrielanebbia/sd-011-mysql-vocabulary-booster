@@ -8,4 +8,4 @@ SELECT JOB_TITLE AS Cargo,
     AND 30000 THEN 'Alto'
     WHEN MAX_SALARY > 30000 THEN 'Altíssimo'
   END AS Nível
-FROM jobs;
+FROM hr.jobs;
