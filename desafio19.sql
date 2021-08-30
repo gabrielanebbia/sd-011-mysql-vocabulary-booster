@@ -5,9 +5,7 @@ CREATE FUNCTION exibir_quantidade_pessoas_contratadas_por_mes_e_ano(MES INT, ANO
 RETURNS INT READS SQL DATA
 BEGIN
     DECLARE total_hired INT;
-    SELECT COUNT(*)
-	FROM employees
-	WHERE MONTH(HIRE_DATE) = MES AND YEAR(HIRE_DATE) = ANO INTO total_hired;
+    SELECT COUNT(*) FROM employees WHERE MONTH(HIRE_DATE) = MES AND YEAR(HIRE_DATE) = ANO INTO total_hired;
     RETURN total_hired;
 END $$
 
