@@ -6,7 +6,7 @@ BEGIN
 DECLARE total INT;
 SELECT COUNT(*)
 FROM hr.employees
-WHERE mes = MONTH(hire_date) AND ano = YEAR(hire_date) INTO total;
+WHERE MONTH(hire_date) = mes AND YEAR(hire_date)= ano INTO total;
 RETURN total;
 END $$
 
