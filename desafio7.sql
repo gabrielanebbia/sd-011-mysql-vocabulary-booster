@@ -1,6 +1,6 @@
 SELECT distinct  UCASE(CONCAT(emp.first_name, ' ', emp.last_name)) AS `Nome completo`,
 his.START_DATE AS 'Data de início',
-emp.SALARY
+emp.SALARY AS Salário
 FROM hr.employees AS emp
 INNER JOIN hr.job_history AS his
 ON emp.EMPLOYEE_ID =  his.EMPLOYEE_ID
