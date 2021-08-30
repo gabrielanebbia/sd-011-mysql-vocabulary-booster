@@ -17,5 +17,3 @@ WHERE e.email = email
 ORDER BY Departamento, Cargo;
 END $$
 DELIMITER ;
-
-CALL exibir_historico_completo_por_funcionario('NKOCHHAR');
