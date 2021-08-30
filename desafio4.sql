@@ -12,5 +12,5 @@ FROM hr.employees
 GROUP BY JOB_ID
 )
 AS tmp
-LEFT JOIN hr.jobs ON tmp.JOB_ID = hr.jobs.JOB_ID
+INNER JOIN hr.jobs ON tmp.JOB_ID = hr.jobs.JOB_ID
 ORDER BY `Média Salarial`, Cargo;
