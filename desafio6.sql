@@ -1,8 +1,8 @@
 SELECT
-	CONCAT(EJ.FIRST_NAME, ' ', EJ.LAST_NAME) AS `Nome completo`,
-	EJ.JOB_TITLE AS 'Cargo',
-    JH.START_DATE AS `Data de início do cargo`,
-    D.DEPARTMENT_NAME AS 'Departamento'
+CONCAT(EJ.FIRST_NAME, ' ', EJ.LAST_NAME) AS `Nome completo`,
+EJ.JOB_TITLE AS 'Cargo',
+JH.START_DATE AS `Data de início do cargo`,
+D.DEPARTMENT_NAME AS 'Departamento'
 FROM hr.job_history AS JH
 LEFT JOIN(
 SELECT E.FIRST_NAME, E.LAST_NAME, E.EMPLOYEE_ID, E.DEPARTMENT_ID, J.* FROM hr.employees AS E
