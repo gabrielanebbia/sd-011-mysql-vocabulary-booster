@@ -11,7 +11,7 @@ CREATE FUNCTION exibir_quantidade_pessoas_contratadas_por_mes_e_ano(
 BEGIN
   DECLARE employee_count INT;
   SELECT
-    COUNT(START_DATE)
+    COUNT(HIRE_DATE)
   FROM
     employees
   WHERE
