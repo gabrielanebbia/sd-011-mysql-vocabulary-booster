@@ -1,0 +1,10 @@
+DELIMITER $$
+
+CREATE TRIGGER tg_order_ins
+BEFORE INSERT ON w3schools.orders
+FOR EACH ROW
+BEGIN
+SET NEW.OrderDate = NOW();
+END $$
+
+DELIMITER ;
