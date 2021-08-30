@@ -8,6 +8,5 @@ SELECT Country, COUNT(Country) AS CountryRepeats FROM w3schools.customers
 GROUP BY Country
 ) AS CR
 ON C.Country = CR.Country
-WHERE CR.CountryRepeats - 1 > 0
-GROUP BY CustomerName
-ORDER BY ContactName;
+WHERE CR.CountryRepeats > 1
+ORDER BY C.ContactName;
