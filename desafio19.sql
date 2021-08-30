@@ -13,10 +13,10 @@ BEGIN
   SELECT
     COUNT(START_DATE)
   FROM
-    job_history
+    employees
   WHERE
-    MONTH(START_DATE) = selected_month AND
-    YEAR(START_DATE) = selected_year
+    MONTH(HIRE_DATE) = selected_month AND
+    YEAR(HIRE_DATE) = selected_year
   INTO employee_count;
 
   RETURN employee_count;
