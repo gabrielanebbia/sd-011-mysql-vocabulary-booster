@@ -7,9 +7,9 @@ DECLARE total_empregos TINYINT;
 SELECT COUNT(EMPLOYEE_ID)
 FROM hr.job_history
 WHERE EMPLOYEE_ID = (
-    SELECT EMPLOYEE_ID
-    FROM hr.employees
-    WHERE EMAIL = emailToSearch
+SELECT EMPLOYEE_ID
+FROM hr.employees
+WHERE EMAIL = emailToSearch
 ) INTO total_empregos;
 RETURN total_empregos;
 END $$
