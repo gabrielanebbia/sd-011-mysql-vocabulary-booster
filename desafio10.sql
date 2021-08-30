@@ -1,8 +1,8 @@
 SELECT
   p.ProductName AS 'Produto',
-  MIN(od.Quantity) AS 'Mínima',
-  MAX(od.Quantity) AS 'Máxima',
-  AVG(od.Quantity) AS 'Média'
+  ROUND(MIN(od.Quantity), 2) AS 'Mínima',
+  ROUND(MAX(od.Quantity), 2) AS 'Máxima',
+  ROUND(AVG(od.Quantity), 2) AS 'Média'
 FROM
   order_details AS od
 INNER JOIN
@@ -10,6 +10,8 @@ INNER JOIN
   ON od.ProductID = p.ProductID
 GROUP BY
   p.ProductName
+HAVING
+  ROUND(AVG(od.Quantity), 2) > 20
 ORDER BY
   4 ASC,
   1 ASC;

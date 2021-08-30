@@ -1,13 +1,3 @@
-SHOW COLUMNS FROM employees; -- FirstName, LastName, EmployeeID
-
-SHOW TABLES;
-
-SHOW COLUMNS FROM orders;
-
-SELECT * FROM orders;
-
-SELECT * FROM customers WHERE ContactName LIKE '%Anne%';
-
 SELECT
   CONCAT(e.FirstName, ' ', e.LastName) AS 'Nome completo',
   COUNT(e.EmployeeID) AS 'Total de pedidos'
