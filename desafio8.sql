@@ -10,6 +10,6 @@ ON O.ShipperID = S.ShipperID
 WHERE S.ShipperName
 IN ("Speedy Express", "United Package")
 ORDER BY
-C.ContactName,
-S.ShipperName,
-O.OrderDate;
+`Nome de contato`,
+`Empresa que fez o envio`,
+`Data do pedido`;
