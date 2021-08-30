@@ -8,4 +8,4 @@ INNER JOIN w3schools.products AS p
 ON p.ProductID = od.ProductID
 GROUP BY p.ProductID
 HAVING (ROUND(AVG(od.Quantity),2) > 20)
-ORDER BY Média;
+ORDER BY Média ASC, Produto ASC;
