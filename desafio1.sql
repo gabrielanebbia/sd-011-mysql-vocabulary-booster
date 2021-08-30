@@ -1,5 +1,5 @@
 SELECT
-C.COUNTRY_NAME,
+C.COUNTRY_NAME AS 'País',
 CASE
 WHEN R.REGION_NAME = 'Europe' THEN 'incluído'
 WHEN R.REGION_NAME <> 'Europe' THEN 'não incluído'
