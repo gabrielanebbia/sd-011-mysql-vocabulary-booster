@@ -1,4 +1,4 @@
-SELECT distinct  UCASE(CONCAT(emp.first_name, ' ', emp.last_name)) AS 'Nome completo',
+SELECT  UCASE(CONCAT(emp.first_name, ' ', emp.last_name)) AS 'Nome completo',
 his.START_DATE AS 'Data de início',
 emp.SALARY AS Salário
 FROM hr.employees AS emp
