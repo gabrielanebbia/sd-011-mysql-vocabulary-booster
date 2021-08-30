@@ -1,5 +1,4 @@
 SELECT
-E.EMPLOYEE_ID,	
 UPPER(CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME)) AS `Nome completo`,
 JH.START_DATE as `Data de início`,
 E.SALARY AS `Salário`
