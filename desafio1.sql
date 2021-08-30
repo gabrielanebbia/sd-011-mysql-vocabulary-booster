@@ -1,5 +1,5 @@
 SELECT COUNTRY_NAME AS País,
 IF(region_id = 1,
-    "Incluido",
-    "Não Incluido") AS "Status Inclusao"
+    "Incluído",
+    "Não Incluído") AS "Status Inclusão"
     FROM hr.countries;
