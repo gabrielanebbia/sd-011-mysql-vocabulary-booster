@@ -9,5 +9,5 @@ emp2.PHONE_NUMBER AS 'Telefone funcionário 2'
 FROM hr.employees AS emp
 INNER JOIN hr.employees AS emp2 ON emp.JOB_ID = emp2.JOB_ID
 WHERE emp.EMPLOYEE_ID <> emp2.EMPLOYEE_ID
-ORDER BY CONCAT(emp.FIRST_NAME, ' ', emp.LAST_NAME),
-CONCAT(emp2.FIRST_NAME, ' ', emp2.LAST_NAME);
+ORDER BY CONCAT(emp.FIRST_NAME, ' ', emp.LAST_NAME) ASC,
+CONCAT(emp2.FIRST_NAME, ' ', emp2.LAST_NAME) ASC;
