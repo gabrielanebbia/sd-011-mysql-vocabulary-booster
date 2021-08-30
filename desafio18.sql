@@ -1,6 +1,6 @@
 SELECT CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) AS 'Nome completo',
 CONCAT(DATE_FORMAT(h.START_DATE, '%d'), '/', DATE_FORMAT(h.START_DATE, '%m'), '/', YEAR(h.START_DATE)) AS 'Data de início',
-CONCAT(DATE_FORMAT(h.START_DATE, '%d'), '/', DATE_FORMAT(h.END_DATE, '%m'), '/', YEAR(h.END_DATE)) AS 'Data de rescisão',
+CONCAT(DATE_FORMAT(h.END_DATE, '%d'), '/', DATE_FORMAT(h.END_DATE, '%m'), '/', YEAR(h.END_DATE)) AS 'Data de rescisão',
 ROUND((DATEDIFF(h.END_DATE, h.START_DATE) / 365), 2) AS 'Anos trabalhados'
 FROM job_history AS h
 INNER JOIN employees AS e
