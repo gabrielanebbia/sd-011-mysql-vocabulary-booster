@@ -7,5 +7,3 @@ FROM hr.job_history AS JH
 INNER JOIN hr.employees AS E
 ON E.EMPLOYEE_ID = JH.EMPLOYEE_ID
 ORDER BY `Nome completo`, `Anos trabalhados`;
-
-
