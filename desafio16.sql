@@ -1,16 +1,18 @@
 USE hr;
 DELIMITER $$
 
-CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionarios(email VARCHAR(50))
-RETURNS NUMERIC READS SQL DATA
+CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(email VARCHAR(50))
+RETURNS INT READS SQL DATA
 BEGIN
-DECLARE conta INT;
-SELECT COUNT(e.EMPLOYEE_ID) AS total_empregos
-FROM employees AS e
-INNER JOIN job_history AS jh
-ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID
-WHERE EMAIL = email INTO conta;
-RETURN conta;
+DECLARE total INT;
+SELECT COUNT(a.EMAIL) AS total_empregos
+FROM employees AS a
+INNER JOIN job_history AS b
+ON a.EMPLOYEE_ID = b.EMPLOYEE_ID
+WHERE a.EMAIL = email
+GROUP BY a.EMAIL
+INTO total;
+RETURN total;
 END $$
 
 DELIMITER ;
