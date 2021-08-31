@@ -7,12 +7,12 @@ RETURNS INT READS SQL DATA
 BEGIN
 DECLARE countEmp INT;
 SELECT
-COUNT(hr.HIRE_DATE)
+COUNT(HIRE_DATE)
 FROM
 hr.employees
 WHERE
-MONTH(hr.HIRE_DATE) = monthSelec AND
-YEAR(hr.HIRE_DATE) = yearSelec
+MONTH(HIRE_DATE) = monthSelec AND
+YEAR(HIRE_DATE) = yearSelec
 INTO countEmp;
 RETURN countEmp;
 END $$
