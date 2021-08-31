@@ -1,6 +1,6 @@
 SELECT 
     jobs.JOB_TITLE AS Cargo,
-    ROUND(AVG(employees.SALARY), 2) AS 'Média Salarial',
+    ROUND(AVG(employees.SALARY), 2) AS 'Média salarial',
     CASE
         WHEN
             AVG(employees.SALARY) >= 2000
