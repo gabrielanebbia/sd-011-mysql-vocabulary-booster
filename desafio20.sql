@@ -13,6 +13,7 @@ INNER JOIN hr.departments AS dep
 ON dep.DEPARTMENT_ID = `history`.DEPARTMENT_ID
 INNER JOIN hr.jobs AS j
 ON j.JOB_ID = `history`.JOB_ID
-WHERE emp.EMAIL = email;
+WHERE emp.EMAIL = email
+ORDER BY dep.DEPARTMENT_NAME ASC, j.JOB_TITLE ASC;
 END $$
 DELIMITER ;
