@@ -9,7 +9,7 @@ WHERE employee_id IN (
 SELECT employee_id 
 FROM hr.employees
 WHERE email = input_email
-);
+)
 INTO total_jobs;
 RETURN total_jobs;
 END $$
