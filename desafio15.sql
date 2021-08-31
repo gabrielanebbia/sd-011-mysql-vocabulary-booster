@@ -1,5 +1,4 @@
 USE hr;
-
 DELIMITER $$ 
 CREATE PROCEDURE buscar_media_por_cargo(IN nomeCargo VARCHAR(100))
 BEGIN
@@ -12,5 +11,4 @@ WHERE J.JOB_TITLE = nomeCargo
 GROUP BY E.JOB_ID;
 END $$
 DELIMITER ;
-
 CALL buscar_media_por_cargo('Programmer');
