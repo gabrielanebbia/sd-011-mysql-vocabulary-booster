@@ -10,4 +10,3 @@
     FROM employees as e INNER JOIN jobs as j ON j.JOB_ID = e.JOB_ID
     GROUP BY JOB_TITLE
     ORDER BY ROUND(AVG(SALARY), 2) ASC, JOB_TITLE;
-
