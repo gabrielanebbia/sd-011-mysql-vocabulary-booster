@@ -11,4 +11,5 @@ GROUP BY
 HAVING
   ROUND(AVG(OD.Quantity), 2) > 20.00
 ORDER BY
-  ROUND(AVG(OD.Quantity), 2);
+  ROUND(AVG(OD.Quantity), 2) ASC,
+  P.ProductName ASC;
