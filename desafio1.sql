@@ -1,8 +1,8 @@
 SELECT 
     countries.COUNTRY_NAME AS País,
     IF(regions.REGION_NAME = 'Europe',
-        'incluido',
-        'não incluido') AS 'Status Inclusão'
+        'incluído',
+        'não incluído') AS 'Status Inclusão'
 FROM
     hr.countries AS countries
         INNER JOIN
