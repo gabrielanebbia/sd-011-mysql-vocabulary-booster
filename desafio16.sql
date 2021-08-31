@@ -1,4 +1,4 @@
-USE sakila;
+USE hr;
 DELIMITER $$
 
 CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(email VARCHAR(150))
@@ -12,7 +12,7 @@ LEFT JOIN hr.employees AS E
 ON JH.EMPLOYEE_ID = E.EMPLOYEE_ID
 WHERE E.EMAIL = email
 GROUP BY JH.EMPLOYEE_ID
-INTO total_empregos ;
+INTO total_empregos;
 RETURN total_empregos;
 END $$
 
