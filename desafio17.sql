@@ -1,0 +1,8 @@
+DELIMITER $$
+CREATE TRIGGER insereDataAtual
+BEFORE INSERT ON w3schools.orders
+FOR EACH ROW
+BEGIN 
+SET NEW.OrderDate = DATE(NOW());
+END $$
+DELIMITER ;
