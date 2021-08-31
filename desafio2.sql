@@ -8,4 +8,4 @@ WHEN MAX_SALARY > 30000 THEN 'Altíssimo'
 ELSE 'ERROR'
 END AS 'Nível'
 FROM hr.jobs
-ORDER BY Cargo;
+ORDER BY Cargo ASC;
