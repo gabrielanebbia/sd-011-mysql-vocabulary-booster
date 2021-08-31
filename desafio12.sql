@@ -8,7 +8,6 @@ employee_two.PHONE_NUMBER AS 'Telefone funcionário 2'
 FROM
 hr.employees AS employee_one,
 hr.employees AS employee_two
-WHERE
-employee_one.JOB_ID = employee_two.JOB_ID
-HAVING employee_one.EMPLOYEE_ID <> employee_two.EMPLOYEE_ID
-ORDER BY `Nome completo funcionário 1`ASC, `Nome completo funcionário 2`;
+WHERE employee_one.JOB_ID = employee_two.JOB_ID
+HAVING `Nome completo funcionário 1` <> `Nome completo funcionário 2`
+ORDER BY `Nome completo funcionário 1` ASC, `Nome completo funcionário 2`;
