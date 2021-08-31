@@ -1,6 +1,6 @@
-SELECT* FROM w3schools.products;
-SELECT* FROM w3schools.order_details;
-SELECT* FROM w3schools;
+-- SELECT* FROM w3schools.products;
+-- SELECT* FROM w3schools.order_details;
+-- SELECT* FROM w3schools;
 
 SELECT
 p.ProductName AS 'Produto',
