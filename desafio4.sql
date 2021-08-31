@@ -9,4 +9,4 @@ END AS 'senioridade'
 FROM hr.jobs AS jobs
 INNER JOIN hr.employees AS e
 ON jobs.JOB_ID = e.JOB_ID
-GROUP BY Cargo
+GROUP BY Cargo;
