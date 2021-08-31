@@ -24,4 +24,4 @@ ORDER BY (
 SELECT AVG(OD.Quantity)
 FROM w3schools.order_details OD
 WHERE P.ProductID = OD.ProductID
-);
+), Produto;
