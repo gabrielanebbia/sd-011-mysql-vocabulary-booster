@@ -10,4 +10,4 @@ INNER JOIN
 hr.departments AS d ON d.DEPARTMENT_ID = jh.DEPARTMENT_ID
 INNER JOIN
 hr.jobs AS j ON j.JOB_ID = jh.JOB_ID
-ORDER BY CONCAT(e.FIRST_NAME,'',e.LAST_NAME) DESC , j.JOB_TITLE;
+ORDER BY `Nome completo` DESC , Cargo;
