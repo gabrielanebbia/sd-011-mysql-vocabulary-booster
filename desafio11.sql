@@ -9,4 +9,4 @@ WHERE
     cm.Country = cmnew.Country
         AND cm.CustomerID != cmnew.CustomerID
 GROUP BY Nome , País
-ORDER BY Nome
+ORDER BY Nome;
