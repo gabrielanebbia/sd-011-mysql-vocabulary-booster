@@ -13,4 +13,4 @@ GROUP BY JOB_ID
 )
 AS tmp
 INNER JOIN hr.jobs ON tmp.JOB_ID = hr.jobs.JOB_ID
-ORDER BY `Média Salarial`, Cargo;
+ORDER BY `Média salarial`, Cargo;
