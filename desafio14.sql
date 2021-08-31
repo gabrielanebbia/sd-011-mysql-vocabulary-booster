@@ -1,7 +1,7 @@
 SELECT
-	DISTINCT Country AS País
+DISTINCT Country AS País
 FROM (
-	SELECT Country from w3schools.suppliers
+SELECT Country from w3schools.suppliers
     UNION ALL
     SELECT Country from w3schools.customers
 ) AS Countries
