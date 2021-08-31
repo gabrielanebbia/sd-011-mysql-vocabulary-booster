@@ -1,4 +1,4 @@
-SELECT JOB_TITLE AS Cargo, `Média Salarial`,
+SELECT JOB_TITLE AS Cargo, `Média salarial`,
 CASE
 WHEN `Média salarial` BETWEEN 2000 AND 5800 THEN 'Júnior'
 WHEN `Média salarial` BETWEEN 5801 AND 7500 THEN 'Pleno'
