@@ -4,4 +4,4 @@ jb.JOB_TITLE AS 'Cargo',
 ROUND((jb.MIN_SALARY / 12), 2) AS 'Média mínima mensal',
 ROUND((jb.MAX_SALARY / 12), 2) AS 'Média máxima mensal'
 FROM hr.jobs AS jb
-ORDER BY `Variação Salarial` ASC;
+ORDER BY `Variação Salarial` ASC, `Cargo` ASC;

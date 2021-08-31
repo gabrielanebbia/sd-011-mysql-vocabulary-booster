@@ -4,4 +4,3 @@ FROM hr.countries as ct
 LEFT JOIN hr.regions as rg
 ON ct.REGION_ID = rg.REGION_ID AND ct.REGION_ID = 1
 ORDER BY ct.COUNTRY_NAME;
-SELECT * FROM hr.regions;

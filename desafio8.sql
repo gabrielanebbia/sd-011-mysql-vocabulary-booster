@@ -8,4 +8,4 @@ INNER JOIN w3schools.orders AS ords
 ON
 (ords.ShipperID IN (1, 2) AND ords.ShipperID = ships.ShipperID)
 AND cstmr.CustomerID = ords.CustomerID
-ORDER BY cstmr.ContactName ASC, `Empresa que fez o envio` ASC;
+ORDER BY `Nome de contato` ASC, `Empresa que fez o envio` ASC, `Data do pedido` ASC;

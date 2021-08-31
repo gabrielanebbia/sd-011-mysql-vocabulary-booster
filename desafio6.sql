@@ -8,6 +8,6 @@ INNER JOIN hr.job_history AS jb_hist
 INNER JOIN hr.jobs AS jb
 INNER JOIN hr.departments AS dep
 ON jb_hist.EMPLOYEE_ID = emp.EMPLOYEE_ID
-AND emp.JOB_ID = jb.JOB_ID
+AND jb_hist.JOB_ID = jb.JOB_ID
 AND jb_hist.DEPARTMENT_ID = dep.DEPARTMENT_ID 
-ORDER BY emp.FIRST_NAME DESC;
+ORDER BY `Nome completo` DESC, `Cargo` ASC;
