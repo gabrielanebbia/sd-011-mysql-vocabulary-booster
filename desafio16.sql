@@ -13,4 +13,4 @@ WHERE email = input_email
 INTO total_jobs;
 RETURN total_jobs;
 END $$
-DELIMITER ;
+DELIMITER;

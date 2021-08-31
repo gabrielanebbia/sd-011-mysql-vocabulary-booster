@@ -24,4 +24,4 @@ ORDER BY
 `Nome completo`,
 `Cargo`;
 END $$
-DELIMITER ;
+DELIMITER;
