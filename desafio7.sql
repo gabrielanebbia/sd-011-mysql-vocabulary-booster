@@ -8,4 +8,4 @@ ON (
 MONTH(jb_hist.START_DATE) IN (01,02,03)
 AND jb_hist.EMPLOYEE_ID = emp.EMPLOYEE_ID
 )
-ORDER BY emp.FIRST_NAME ASC;
+ORDER BY emp.FIRST_NAME ASC, `Data de início` ASC;
