@@ -4,7 +4,6 @@ CREATE TRIGGER insere_data_atual
 BEFORE INSERT ON orders
 FOR EACH ROW
 BEGIN
-    INSERT INTO orders (OrderDate)
-    VALUES(CURRENT_TIMESTAMP());
+SET NEW.OrderDate = NOW();
 END $$
 DELIMITER $$ ;
