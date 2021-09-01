@@ -4,14 +4,14 @@ SELECT
     ROUND(AVG(j.min_salary / 12),
     2) AS `Média mínima mensal`,
     ROUND(AVG(j.max_salary / 12),
-    2) AS `Média máxima mensal` 
+    2) AS `Média máxima mensal`
 FROM
-    hr.jobs AS j 
+    hr.jobs AS j
 INNER JOIN
-    hr.employees AS e 
-        ON j.job_id = e.job_id 
+    hr.employees AS e
+        ON j.job_id = e.job_id
 GROUP BY
-    `Cargo` 
+    `Cargo`
 ORDER BY
     `Variação Salarial`,
     `Cargo`;
