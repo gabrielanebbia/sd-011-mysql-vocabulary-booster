@@ -1,4 +1,4 @@
-     select 
+      select 
   concat(FIRST_NAME, ' ', LAST_NAME) AS "Nome completo",
   JOB_TITLE AS 'Cargo',
   START_DATE AS "Data de início",
@@ -11,4 +11,3 @@
     INNER JOIN  employees AS e
     ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID 
     order by concat(FIRST_NAME, ' ', LAST_NAME) DESC, JOB_TITLE;
-    
