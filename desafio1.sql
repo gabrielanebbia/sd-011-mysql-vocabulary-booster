@@ -5,9 +5,5 @@ IF (c.region_id = '1',
 'não incluído') AS `Status Inclusão` 
 FROM
 hr.countries AS c
-INNER JOIN
-hr.regions AS r
-GROUP BY
-`País`
 ORDER BY
 `País`;
