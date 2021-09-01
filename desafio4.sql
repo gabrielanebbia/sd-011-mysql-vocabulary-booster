@@ -1,5 +1,3 @@
-USE hr;
-
 SELECT
 j.job_title as Cargo, ROUND(AVG(e.salary), 2) as "Média salarial",
 CASE
