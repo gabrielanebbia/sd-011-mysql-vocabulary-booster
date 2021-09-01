@@ -8,7 +8,7 @@ dp.DEPARTMENT_NAME AS `Departamento`,
 jb.JOB_TITLE AS 'Cargo'
 FROM hr.job_history AS jbh
 INNER JOIN hr.employees AS emp
-ON jh.EMPLOYEE_ID = emp.EMPLOYEE_ID
+ON jbh.EMPLOYEE_ID = emp.EMPLOYEE_ID
 INNER JOIN hr.jobs AS jb
 ON jbh.JOB_ID = jb.JOB_ID
 INNER JOIN hr.departments AS dp
