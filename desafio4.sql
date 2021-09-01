@@ -1,12 +1,13 @@
-SELECT t.JOB_TITLE AS 'Cargo', ROUND(AVG(sal.SALARY),2) AS 'Média salarial',
-(CASE
+SELECT t.JOB_TITLE AS 'Cargo', 
+ROUND(AVG(sal.SALARY),2) AS 'Média salarial',
+CASE
 WHEN ROUND(AVG(sal.SALARY),2) <= 5800 THEN 'Júnior'
 WHEN ROUND(AVG(sal.SALARY),2) <= 7500 THEN 'Pleno'
 WHEN ROUND(AVG(sal.SALARY),2) <= 10500 THEN 'Sênior'
 WHEN ROUND(AVG(sal.SALARY),2) > 10500 THEN 'CEO'
-END) AS 'Senioridade'
+END AS 'Senioridade'
 FROM employees AS sal
 INNER JOIN hr.jobs AS t
 ON sal.JOB_ID = t.JOB_ID
 GROUP BY JOB_TITLE
-ORDER BY SALARY;
+ORDER BY (AVG(sal.salary)) ASC, t.JOB_TITLE ASC;
