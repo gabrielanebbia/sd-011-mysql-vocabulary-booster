@@ -1,0 +1,8 @@
+SELECT UCASE(CONCAT(n.FIRST_NAME, ' ', n.LAST_NAME)) AS 'Nome completo',
+s.START_DATE AS 'Data de início',
+n.SALARY AS 'SALÁRIO'
+FROM hr.employees AS n
+INNER JOIN hr.job_history AS s
+ON s.EMPLOYEE_ID = n.EMPLOYEE_ID
+WHERE MONTH(s.START_DATE) IN (01, 02, 03)
+ORDER BY 1 ASC, 2 ASC;
