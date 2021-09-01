@@ -6,11 +6,14 @@ SELECT
 FROM
 	hr.employees AS e
 INNER JOIN
-	hr.job_history AS h ON h.employee_id = e.employee_id
+	hr.job_history AS h
+	ON h.employee_id = e.employee_id
 INNER JOIN
-	hr.jobs AS j ON j.job_id = h.job_id
+	hr.jobs AS j
+	ON j.job_id = h.job_id
 INNER JOIN
-	hr.departments AS d ON d.department_id = h.department_id
+	hr.departments AS d
+	ON d.department_id = h.department_id
 ORDER BY
 	`Nome completo` DESC,
 	`Cargo`;

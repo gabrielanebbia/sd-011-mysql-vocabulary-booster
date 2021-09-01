@@ -10,7 +10,8 @@ SELECT
 FROM
 	hr.jobs AS j
 INNER JOIN
-	hr.employees AS e ON j.job_id = e.job_id
+	hr.employees AS e
+	ON j.job_id = e.job_id
 GROUP BY
 	`Cargo`
 ORDER BY
