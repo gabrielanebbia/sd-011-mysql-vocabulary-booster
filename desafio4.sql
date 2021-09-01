@@ -8,9 +8,9 @@ SELECT
 		WHEN AVG(e.salary) > 10500 THEN 'CEO'
 	END AS `Senioridade`
 FROM
-	jobs AS j
+	hr.jobs AS j
 INNER JOIN
-	employees AS e ON j.job_id = e.job_id
+	hr.employees AS e ON j.job_id = e.job_id
 GROUP BY
 	`Cargo`
 ORDER BY
