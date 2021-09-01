@@ -1,5 +1,5 @@
 SELECT
-	CONCAT(e.first_name, ' ', e.last_name) AS `Nome Completo`,
+	CONCAT(e.first_name, ' ', e.last_name) AS `Nome completo`,
 	j.job_title AS `Cargo`,
 	h.start_date AS `Data de início do cargo`,
 	d.department_name AS `Departamento`
@@ -12,5 +12,5 @@ INNER JOIN
 INNER JOIN
 	hr.departments AS d ON d.department_id = h.department_id
 ORDER BY
-	`Nome Completo` DESC,
+	`Nome completo` DESC,
 	`Cargo`;
