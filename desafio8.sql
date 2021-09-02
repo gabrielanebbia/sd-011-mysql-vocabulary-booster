@@ -5,4 +5,5 @@ INNER JOIN w3schools.orders AS O
 ON C.customerID = O.CustomerID
 INNER JOIN w3schools.shippers AS S
 ON S.ShipperID = O.ShipperID
+WHERE shippername = 'Speedy Express' OR shippername = 'United Package'
 ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;

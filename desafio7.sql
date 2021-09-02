@@ -3,4 +3,5 @@ salary AS Salário
 FROM hr.job_history AS JB
 INNER JOIN
 hr.employees AS E ON JB.EMPLOYEE_ID = E.EMPLOYEE_ID
+WHERE MONTH(start_date) < 4
 ORDER BY `Nome Completo`, `Data de início`;
