@@ -1,7 +1,7 @@
 SELECT
-	wc.ContactName AS 'Nome de contato',
-	wo.OrderDate AS 'Data do pedido',
-    ws.ShipperName AS 'Empresa que fez o envio'
+wc.ContactName AS 'Nome de contato',
+wo.OrderDate AS 'Data do pedido',
+ws.ShipperName AS 'Empresa que fez o envio'
 FROM w3schools.customers AS wc
 INNER JOIN w3schools.orders AS wo
 ON wo.CustomerID = wc.CustomerID
