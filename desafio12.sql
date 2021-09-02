@@ -8,4 +8,3 @@
     FROM employees AS emp1, employees AS emp2
     WHERE emp1.JOB_ID = emp2.JOB_ID AND emp1.EMPLOYEE_ID <> emp2.EMPLOYEE_ID
     ORDER BY CONCAT(emp1.FIRST_NAME, ' ', emp1.LAST_NAME), CONCAT(emp2.FIRST_NAME, ' ', emp2.LAST_NAME);
-    
