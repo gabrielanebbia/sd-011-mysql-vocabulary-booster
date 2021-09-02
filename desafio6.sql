@@ -1,9 +1,12 @@
-SELECT contactname AS 'Nome de contato', shippername AS 'Empresa que fez o envio',
-DATE(orderdate) AS 'Data do pedido'
-FROM w3schools.customers AS C
-INNER JOIN w3schools.orders AS O
-ON C.customerID = O.CustomerID
-INNER JOIN w3schools.shippers AS S
-ON S.ShipperID = O.ShipperID
-WHERE shippername = 'Speedy Express' OR shippername = 'United Package'
-ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;
+SELECT CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) AS `Nome completo`,
+  j.JOB_TITLE AS `Cargo`,
+  h.START_DATE AS `Data de início do cargo`,
+  d.DEPARTMENT_NAME AS `Departamento`
+FROM hr.job_history AS h
+  INNER JOIN hr.employees AS e 
+    ON e.EMPLOYEE_ID = h.EMPLOYEE_ID
+  INNER JOIN hr.jobs AS j 
+    ON j.JOB_ID = h.JOB_ID
+  INNER JOIN hr.departments AS d
+    ON d.DEPARTMENT_ID = h.DEPARTMENT_ID
+ORDER BY CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) DESC, Cargo;
