@@ -9,3 +9,4 @@ ROUND(AVG(Quantity), 2) AS 'Média'
     GROUP BY ProductName
     HAVING AVG(Quantity) > 20
     ORDER BY ROUND(AVG(Quantity), 2), ProductName;
+    
