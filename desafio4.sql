@@ -11,7 +11,7 @@ from hr.employees as e
 inner join hr.jobs as j
 on e.JOB_ID = j.JOB_ID
 group by Cargo
-order by round(avg(e.SALARY), 2), j.JOB_TITLE ;
+order by `Média salarial`, j.JOB_TITLE ;
 -- avg e group by encontrados em:
 -- https://pt.stackoverflow.com/questions/14433/como-calcular-m%C3%A9dia-de-um-resultado-de-query-mysql
 -- https://pt.stackoverflow.com/questions/162534/pivot-agrupar-registros-duplicados-em-uma-unica-linha
