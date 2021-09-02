@@ -1,0 +1,1 @@
+SELECT COUNTRY_NAME, if(REGION_ID = 1, 'incluído', 'não incluído') FROM hr.countries AS hr;
