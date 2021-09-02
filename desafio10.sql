@@ -7,4 +7,4 @@ FROM w3schools.products AS wp
 INNER JOIN w3schools.order_details AS wod
 ON wp.ProductID = wod.ProductID
 GROUP BY wp.ProductName HAVING ROUND(AVG(wod.Quantity), 2)  > 20
-ORDER BY AVG(wod.Quantity);
+ORDER BY AVG(wod.Quantity), wp.ProductName;

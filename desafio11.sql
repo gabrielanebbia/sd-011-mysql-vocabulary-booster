@@ -11,4 +11,5 @@ GROUP BY Country
     ) AS countryData
 INNER JOIN w3schools.customers AS wc3
 ON wc3.Country = countryData.País
+WHERE countryData.Counter != 0
 ORDER BY wc3.ContactName;
