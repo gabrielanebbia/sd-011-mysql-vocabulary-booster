@@ -1,5 +1,3 @@
-select * from hr.employees;
-select * from hr.jobs;
 select j.JOB_TITLE as 'Cargo',
 round(avg(e.SALARY), 2) as 'Média salarial',
 case
