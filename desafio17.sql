@@ -6,4 +6,3 @@ BEGIN
 SET NEW.OrderDate = CURRENT_DATE();
 END$$
 DELIMITER ;
-
