@@ -1,10 +1,10 @@
-SELECT C.ContactName AS 'Nome de contato',
-S.ShipperName AS 'Empresa que fez o envio',
-O.OrderDate AS 'Data do pedido'
-FROM w3schools.customers AS C
-INNER JOIN w3schools.orders AS O
-ON C.CustomerID = O.CustomerID
-INNER JOIN w3schools.shippers AS S
-ON S.ShipperID = O.ShipperID
-WHERE S.ShipperName IN ('Speedy Express', 'United Package')
-ORDER BY C.ContactName, S.ShipperName, O.OrderDate;
+SELECT p.productName AS Produto,
+MIN(od.quantity) AS 'Mínima',
+MAX(od.quantity) AS 'Máxima',
+ROUND(AVG(od.quantity), 2) AS 'Média'
+FROM w3schools.order_details AS od
+INNER JOIN w3schools.products AS p
+ON od.ProductID = p.ProductID
+GROUP BY Produto
+HAVING Média > 20
+ORDER BY Média, Produto;
