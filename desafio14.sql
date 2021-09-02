@@ -1,5 +1,5 @@
-(SELECT Country FROM customers)
+(SELECT Country AS 'País' FROM customers) 
 UNION
 (SELECT Country FROM suppliers)
-ORDER BY Country ASC
+ORDER BY País ASC
 LIMIT 5;
