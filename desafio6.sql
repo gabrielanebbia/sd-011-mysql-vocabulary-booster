@@ -10,3 +10,4 @@ ON jh.JOB_ID = j.JOB_ID
 inner join hr.departments as d
 on jh.DEPARTMENT_ID = d.DEPARTMENT_ID
 ORDER BY `Nome completo` DESC, JOB_TITLE;
+-- o uso de template strings foi feito com ajuda do mestre Johnatas Henrique que consertei nos últimos desafios também
