@@ -1,3 +1,5 @@
+SELECT * FROM orders;
+
 DELIMITER $$
 
 CREATE TRIGGER inserir_automaticamente_data_atual
