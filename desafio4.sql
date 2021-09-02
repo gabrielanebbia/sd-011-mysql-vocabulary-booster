@@ -1,6 +1,5 @@
 -- Exiba a média salarial e o nível de senioridade de todas as pessoas empregadas, agrupadas pelo cargo
 -- Obtenha informações a respeito dos salários das pessoas empregadas.
-SELECT * FROM hr.jobs;
 SELECT JOB_TITLE AS "Cargo",
 ROUND(AVG(MIN_SALARY), 2) AS "Média salarial",
 CASE
