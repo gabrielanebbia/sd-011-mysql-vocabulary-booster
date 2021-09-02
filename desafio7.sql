@@ -1,0 +1,18 @@
+SELECT
+UCASE(CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME)) AS 'Nome completo',
+jh.START_DATE AS 'Data de início',
+e.SALARY AS 'Salário'
+FROM
+employees AS e
+INNER JOIN
+job_history AS jh
+ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID
+INNER JOIN
+jobs AS j
+ON jh.JOB_ID = j.JOB_ID
+INNER JOIN
+departments AS d
+ON jh.DEPARTMENT_ID = d.DEPARTMENT_ID
+ORDER BY
+CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) ASC,
+jh.START_DATE ASC;
