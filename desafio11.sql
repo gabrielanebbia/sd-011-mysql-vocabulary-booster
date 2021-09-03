@@ -1,5 +1,5 @@
 SELECT c.ContactName as Nome,
-c.Country,
+c.Country AS 'País',
 (
 SELECT COUNT(Country) -1
 FROM customers
