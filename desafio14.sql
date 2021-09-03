@@ -1,7 +1,7 @@
 SELECT
 c.country AS `País`
 FROM
-w3schools.customers AS C
+w3schools.customers AS c
 UNION
 SELECT
 s.country
