@@ -11,5 +11,4 @@ INNER JOIN hr.jobs AS job
 ON jobhis.JOB_ID = job.JOB_ID
 ORDER BY CONCAT(emps.FIRST_NAME,' ', emps.LAST_NAME) DESC, Cargo ASC;
 
-
 -- Artigo de apoio: https://www.w3schools.com/mysql/func_mysql_case.asp
