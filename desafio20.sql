@@ -3,17 +3,17 @@ DELIMITER $$
 
 CREATE PROCEDURE exibir_historico_completo_por_funcionario(IN email VARCHAR(100))
 BEGIN
-SELECT CONCAT(E.first_name,' ',E.last_name) AS 'Nome completo',
-D.department_name AS 'Departamento',
-J.job_title AS `Cargo`
-FROM hr.employees AS E
-INNER JOIN hr.departments AS D
-ON E.department_id = D.department_id
-INNER JOIN hr.job_history AS JB
-ON E.job_id = JB.job_id
-INNER JOIN hr.jobs AS J
-ON E.job_id = J.job_id
-WHERE email = E.email
+SELECT CONCAT(e.first_name, ' ', e.last_name) AS 'Nome completo',
+d.department_name AS 'Departamento',
+j.job_title AS 'Cargo'
+FROM hr.employees AS e
+INNER JOIN hr.job_history AS jh
+ON e.employee_id = jh.employee_id
+INNER JOIN hr.departments AS d
+ON jh.department_id = d.department_id
+INNER JOIN hr.jobs AS j
+ON jh.job_id = j.job_id
+WHERE email = e.email
 ORDER BY `Departamento`, `Cargo`;
 END $$
 
