@@ -7,7 +7,8 @@ INNER JOIN
 w3schools.products AS p
 ON o.productId = p.productId
 GROUP BY
-`Produto`
+`Produto`,
+`Price`
 HAVING
 MAX(o.quantity) > 80
 ORDER BY
