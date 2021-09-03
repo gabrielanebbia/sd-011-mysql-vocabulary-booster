@@ -1,8 +1,8 @@
-SELECT 
-jobs.JOB_TITLE AS 'Cargo',
-(MAX_SALARY - MIN_SALARY) AS 'Variação Salarial',
-ROUND(AVG (MIN_SALARY / 12), 2) AS 'Média mínima mensal',
-ROUND(AVG (MAX_SALARY / 12), 2) AS 'Média máxima mensal'
+SELECT
+job_title AS 'Cargo',
+(max_salary - min_salary) AS 'Variação Salarial',
+ROUND(AVG (min_salary / 12), 2) AS 'Média mínima mensal',
+ROUND(AVG (max_salary / 12), 2) AS 'Média máxima mensal'
 FROM hr.jobs
-GROUP BY jobs.JOB_TITLE
-ORDER BY (MAX_SALARY - MIN_SALARY), jobs.JOB_TITLE;
+GROUP BY job_title
+ORDER BY (max_salary - min_salary), job_title;
