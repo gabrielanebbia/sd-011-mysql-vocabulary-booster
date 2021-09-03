@@ -10,4 +10,4 @@
     ON jh.DEPARTMENT_ID = d.DEPARTMENT_ID
     INNER JOIN  employees AS e
     ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID 
-    order by concat(FIRST_NAME, ' ', LAST_NAME) DESC, JOB_TITLE;
+    ORDER BY concat(FIRST_NAME, ' ', LAST_NAME) DESC, JOB_TITLE;
