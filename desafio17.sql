@@ -5,7 +5,8 @@ CREATE TRIGGER trigger_orders_update
     BEFORE UPDATE ON orders
     FOR EACH ROW
 BEGIN
-    SET NEW.OrderDate = CURDATE();
+    INSERT INTO orders(OrderID, CustomerID, EmployeeID, OrderDate, ShipperID)
+    VALUES(NEW.OrderID, NEW.CustomerID, NEW.EmployeeID, NEW.OrderDate = CURRENT_DATE(), NEW.ShipperID);
 END $$
 
 DELIMITER ;
