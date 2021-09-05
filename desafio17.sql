@@ -6,7 +6,7 @@ CREATE TRIGGER trigger_orders_update
     FOR EACH ROW
 BEGIN
     INSERT INTO orders(OrderID, CustomerID, EmployeeID, OrderDate, ShipperID)
-    VALUES(NEW.OrderID, NEW.CustomerID, NEW.EmployeeID, CURRENT_DATE(), NEW.ShipperID);
+    VALUES(NEW.OrderID, NEW.CustomerID, NEW.EmployeeID, NEW.CURRENT_DATE(), NEW.ShipperID);
 END $$
 
 DELIMITER ;
