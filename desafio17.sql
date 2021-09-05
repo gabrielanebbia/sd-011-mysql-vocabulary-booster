@@ -1,12 +1,11 @@
 USE w3schools;
 DELIMITER $$
 
-CREATE TRIGGER trigger_orders_update
-    AFTER UPDATE ON orders
+CREATE TRIGGER trigger_orders_insert
+    BEFORE INSERT ON orders
     FOR EACH ROW
 BEGIN
-    INSERT INTO orders(OrderID, CustomerID, EmployeeID, OrderDate, ShipperID)
-    VALUES(NEW.OrderID, NEW.CustomerID, NEW.EmployeeID, NEW.OrderDate = CURRENT_DATE(), NEW.ShipperID);
+    SET NEW.OrderDate = CURRENT_DATE();
 END $$
 
 DELIMITER ;
