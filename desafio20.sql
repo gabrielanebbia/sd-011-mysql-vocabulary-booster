@@ -1,3 +1,6 @@
+DELIMITER $$
+
+CREATE PROCEDURE exibir_historico_completo_por_funcionario(IN email VARCHAR(100))
 BEGIN
   SELECT
     CONCAT(employees.FIRST_NAME, ' ', employees.LAST_NAME) AS `Nome completo`,
@@ -11,7 +14,7 @@ BEGIN
   INNER JOIN jobs AS jobs
     ON jobs.JOB_ID = job_history.JOB_ID
     WHERE employees.EMAIL = email
-    ORDER BY `Departamento`, `Cargo`;
+  ORDER BY `Departamento`, `Cargo`;
 END $$
 
 DELIMITER ;
