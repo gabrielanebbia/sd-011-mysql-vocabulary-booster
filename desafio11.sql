@@ -8,7 +8,6 @@ GROUP BY country
 HAVING country = c1.country
 ) - 1 AS 'Número de compatriotas'
 FROM w3schools.customers AS c1
-GROUP BY c1.customername
 HAVING (SELECT
 COUNT(country)
 FROM w3schools.customers
