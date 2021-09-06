@@ -7,7 +7,7 @@ BEGIN
   INNER JOIN employees AS employees
     ON employees.EMPLOYEE_ID = job_history.EMPLOYEE_ID
   INNER JOIN departments AS departments
-   ON departments.DEPARTMENT_ID = job_history.DEPARTMENT_ID
+    ON departments.DEPARTMENT_ID = job_history.DEPARTMENT_ID
   INNER JOIN jobs AS jobs
     ON jobs.JOB_ID = job_history.JOB_ID
     WHERE employees.EMAIL = email
