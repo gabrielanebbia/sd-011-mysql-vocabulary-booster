@@ -5,6 +5,6 @@ BEGIN
   FROM hr.employees AS he
   INNER JOIN hr.jobs AS hj
   ON he.JOB_ID = hj.JOB_ID
-  WHERE hj.JOB_ID = cargo;
+  WHERE hj.JOB_TITLE = cargo;
 END $$
 DELIMITER ;
