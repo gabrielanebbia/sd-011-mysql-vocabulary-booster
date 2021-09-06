@@ -12,5 +12,4 @@ hr.job_history AS j_h ON empls.EMPLOYEE_ID = j_h.EMPLOYEE_ID
 WHERE EMAIL = emplEmail INTO job_quantity_history;
 RETURN job_quantity_history;
 END $$
-
 DELIMITER ;
