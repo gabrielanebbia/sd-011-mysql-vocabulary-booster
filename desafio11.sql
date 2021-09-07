@@ -4,4 +4,4 @@ WHERE cc.Country = c.Country and cc.CustomerID != c.CustomerID) AS 'Número de c
 FROM w3schools.customers c
 WHERE (SELECT COUNT(Country) from w3schools.customers cc 
 WHERE cc.Country = c.Country and cc.CustomerID != c.CustomerID) != 0
-ORDER BY `Nome`;
+ORDER BY c.CustomerName;
