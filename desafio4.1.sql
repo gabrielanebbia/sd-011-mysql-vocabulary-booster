@@ -7,11 +7,11 @@ WITH cte AS
     GROUP BY j.JOB_TITLE
     ORDER BY col2, col1
 )
-SELECT col1 AS 'Cargo', col2 AS 'Media Salarial',
+SELECT col1 AS 'Cargo', col2 AS 'Média Salarial',
 CASE
-        WHEN (col2 > 2000 AND col2 < 5800) THEN 'Júnior'
-        WHEN (col2 > 5801 AND col2 < 7500) THEN 'Plano'
-        WHEN (col2 > 7501 AND col2 < 10500) THEN 'Sênior'
+        WHEN (col2 >= 2000 AND col2 <= 5800) THEN 'Júnior'
+        WHEN (col2 >= 5801 AND col2 <= 7500) THEN 'Pleno'
+        WHEN (col2 >= 7501 AND col2 <= 10500) THEN 'Sênior'
         WHEN col2 > 10500 THEN 'CEO'
         END AS 'Senioridade' 
 FROM cte;
