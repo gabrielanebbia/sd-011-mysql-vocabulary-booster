@@ -6,7 +6,7 @@ CASE
     WHEN col2 > 10500 THEN 'CEO'
 END AS 'Senioridade'
 FROM (
-    SELECT j.JOB_TITLE AS col1, AVG(e.SALARY) AS col2
+    SELECT j.JOB_TITLE AS col1, round(AVG(e.SALARY),2) AS col2
     FROM jobs AS j
     LEFT JOIN employees AS e
     ON j.JOB_ID = e.JOB_ID
