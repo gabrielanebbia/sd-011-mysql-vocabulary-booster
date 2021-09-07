@@ -1,4 +1,4 @@
-SELECT col1, col2 AS 'Media Salarial',
+SELECT col1 AS 'Cargo', col2 AS 'Media Salarial',
 CASE
     WHEN (col2 > 2000 AND col2 < 5800) THEN 'Júnior'
     WHEN (col2 > 5801 AND col2 < 7500) THEN 'Plano'
