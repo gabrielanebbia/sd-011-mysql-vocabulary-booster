@@ -6,4 +6,3 @@ FROM hr.employees AS em
 WHERE MONTH(jh.START_DATE) <= 3
 ORDER BY concat(em.FIRST_NAME, ' ', em.LAST_NAME) ASC,
   jh.START_DATE ASC;
-  
