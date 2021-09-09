@@ -5,5 +5,6 @@ SELECT pd.ProductName AS 'Produto',
 FROM w3schools.order_details AS od
   LEFT JOIN w3schools.products AS pd ON od.ProductID = pd.ProductID
 GROUP BY od.ProductID
+HAVING ROUND(AVG(od.Quantity), 2) > 20
 ORDER BY ROUND(AVG(od.Quantity), 2) ASC,
   pd.ProductName ASC;
