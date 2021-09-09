@@ -1,5 +1,5 @@
 CREATE TRIGGER trigger_on_insert
-BEFORE INSERT ON hr.orders
+BEFORE INSERT ON w3schools.orders
 FOR EACH ROW
 BEGIN
 SET NEW.OrderDate = NOW();
