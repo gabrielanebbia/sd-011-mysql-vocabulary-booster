@@ -1,2 +1,1 @@
-
-SELECT t.`Nome completo`, t.`Total de pedidos` FROM ( SELECT CONCAT(FirstName, ' ', LastName) AS `Nome completo`, ( SELECT COUNT(EmployeeID) FROM w3schools.orders WHERE EmployeeID = w3schools.employees.EmployeeID) AS `Total de pedidos` FROM w3schools.employees) AS t WHERE t.`Total de pedidos` > 0 ORDER BY t.`Total de pedidos`;
+SELECT CONCAT(e.FirstName, ' ', e.LastName) AS `Nome completo`, COUNT(*) AS `Total de pedidos` FROM w3schools.employees AS e INNER JOIN orders AS o ON e.EmployeeID = o.EmployeeID GROUP BY `Nome completo` ORDER BY `Total de pedidos`;
