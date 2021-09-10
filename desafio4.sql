@@ -6,7 +6,7 @@ WHEN AVG(SALARY) BETWEEN 7501 AND 10500 THEN 'Sênior'
 WHEN AVG(SALARY) > 10500 THEN 'CEO'
 END as Senioridade
 FROM hr.jobs
-INNER JOIN hr.employees
-ON hr.jobs.JOB_ID = hr.employees.JOB_ID
-GROUP BY hr.jobs.JOB_TITLE
-ORDER BY ROUND(AVG(SALARY), 2), hr.jobs.JOB_TITLE;
+INNER JOIN hr.employees AS emp
+ON jobs.JOB_ID = emp.JOB_ID
+GROUP BY jobs.JOB_TITLE
+ORDER BY ROUND(AVG(SALARY), 2), jobs.JOB_TITLE;
