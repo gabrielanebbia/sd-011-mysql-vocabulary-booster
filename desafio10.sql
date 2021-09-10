@@ -7,5 +7,5 @@ INNER JOIN
 w3schools.order_details as order_details
 ON order_details.productID = products.productID
 GROUP BY `Produto`
-HAVING `Média` > 20
+HAVING `Média` > 20.00
 ORDER BY `Média`, `Produto`;
