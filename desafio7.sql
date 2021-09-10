@@ -1,0 +1,8 @@
+select UPPER((CONCAT(EMPLOYEE.FIRST_NAME, ' ', EMPLOYEE.LAST_NAME)))	AS 'Nome completo',
+JOB_HIST.START_DATE AS 'Data de início',
+EMPLOYEE.SALARY AS 'Salário'
+from hr.employees as EMPLOYEE
+INNER JOIN	hr.job_history as JOB_HIST
+on JOB_HIST.EMPLOYEE_ID = EMPLOYEE.EMPLOYEE_ID
+WHERE MONTH(JOB_HIST.START_DATE) IN (1,2,3)
+ORDER BY `Nome completo`	DESC, `Data de início`;
