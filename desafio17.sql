@@ -1,5 +1,3 @@
-USE w3schools;
-
 DELIMITER $$
 
 CREATE TRIGGER trigger_orders_insert

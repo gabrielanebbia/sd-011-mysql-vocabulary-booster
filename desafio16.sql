@@ -1,4 +1,3 @@
-USE hr;
 DELIMITER $$
 
 CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(email_func VARCHAR(100))
