@@ -1,0 +1,1 @@
+SELECT ( SELECT ProductName FROM w3schools.products WHERE ProductID = `or`.ProductID ) AS `Produto`, MAX(Quantity) AS `Mínima`, MIN(Quantity) AS `Máxima`, ROUND(AVG(Quantity), 2) AS `Média` FROM w3schools.order_details AS `or` GROUP BY `Produto` HAVING `Média` > 20  ORDER BY `Média`, `Produto`;
