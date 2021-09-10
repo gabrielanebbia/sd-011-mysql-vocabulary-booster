@@ -6,7 +6,6 @@ FROM w3schools.products AS prdct
 
 INNER JOIN w3schools.order_details AS ords
 ON ords.ProductID = prdct.ProductID
-
 GROUP BY prdct.ProductID
 HAVING ROUND(AVG (ords.Quantity), 2) > 20
 
