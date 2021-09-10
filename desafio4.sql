@@ -10,4 +10,3 @@ INNER JOIN hr.jobs as j
 ON e.JOB_ID = j.JOB_ID
 GROUP BY Cargo
 ORDER BY ROUND(AVG(e.SALARY), 2), j.JOB_TITLE ASC;
-
