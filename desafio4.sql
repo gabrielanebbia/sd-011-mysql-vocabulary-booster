@@ -6,7 +6,7 @@ ROUND(AVG(employees.SALARY), 2) AS `Média salarial`,
         WHEN ROUND(AVG(employees.SALARY)) BETWEEN 7501 AND 10500 THEN 'Sênior'
         WHEN ROUND(AVG(employees.SALARY)) > 10500 THEN 'CEO'
 END AS Senioridade
-FROM hr.jobs AS jobs02 INNER JOIN hr.employees AS employees02
-ON jobs02.JOB_ID = employees02.JOB_ID
+FROM hr.jobs AS jobs INNER JOIN hr.employees AS employees
+ON jobs.JOB_ID = employees.JOB_ID
 GROUP BY jobs.JOB_TITLE
-ORDER BY AVG(employees.SALARY) , jobs.JOB_TITLE;
+ORDER BY AVG(employees.SALARY), jobs.JOB_TITLE;
