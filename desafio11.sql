@@ -4,4 +4,5 @@ c.Country AS 'País',
 WHERE customers.Country = c.Country
 ) AS 'Número de compatriotas'
 FROM customers AS c
+HAVING `Número de compatriotas` > 0
 ORDER BY 1;
