@@ -1,3 +1,7 @@
-A primeira deve possuir o alias "Produto" e exibir o nome do produto.
+-- Considerando o conjunto formado pelas pessoas consumidoras e empresas fornecedoras de produtos, queremos saber quais são os cinco primeiros países distintos, em ordem alfabética, presentes nesse conjunto
+-- Exiba os 05 primeiros países distintos dentre as pessoas consumidoras e as empresas fornecedoras, em ordem alfabética.
 
-A segunda deve possuir o alias "Preço" e exibir o preço desse produto.
+-- Use o banco w3schools como referência
+
+-- Monte uma query que exiba 01 coluna com o alias "País" contendo o nome do país.
+
