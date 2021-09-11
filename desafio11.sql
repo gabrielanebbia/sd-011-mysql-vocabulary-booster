@@ -1,0 +1,1 @@
+SELECT c1.ContactName AS `Nome`, c1.Country AS `País`, c1.`Count` AS `Número de compatriotas` FROM (SELECT ContactName, Country, (SELECT (COUNT(*) - 1) FROM w3schools.customers WHERE Country = c2.Country) AS `Count` FROM w3schools.customers AS c2) AS c1 WHERE c1.`Count` > 1 ORDER BY c1.ContactName;
