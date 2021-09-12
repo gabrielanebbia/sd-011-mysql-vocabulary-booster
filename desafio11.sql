@@ -1,5 +1,5 @@
 SELECT C1.ContactName AS Nome,
-C1.Country AS Pais,
+C1.Country AS País,
 (SELECT (COUNT(Country) - 1)
 FROM customers AS C2
 GROUP BY Country
