@@ -5,10 +5,10 @@ START_DATE AS 'Data de início',
 FROM hr.employees AS employees
     INNER JOIN
         hr.job_history AS job_history ON employees.EMPLOYEE_ID = job_history.EMPLOYEE_ID
-    WHERE
-        MONTH(START_DATE)=1
-    OR
-        MONTH(START_DATE)=2
-    OR
-        MONTH(START_DATE)=3
+WHERE
+    MONTH(START_DATE)=1
+OR
+    MONTH(START_DATE)=2
+OR
+    MONTH(START_DATE)=3
 ORDER BY `Nome completo`, `Data de início`;
