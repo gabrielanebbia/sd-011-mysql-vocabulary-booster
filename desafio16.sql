@@ -1,0 +1,18 @@
+USE hr;
+DELIMITER $$
+
+CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(E_MAIL VARCHAR(100))
+RETURNS INT READS SQL DATA
+BEGIN
+DECLARE total_jobs INT;
+SELECT COUNT(JH.EMPLOYEE_ID) 
+FROM job_history AS JH
+INNER JOIN employees AS E
+ON E.EMPLOYEE_ID = JH.EMPLOYEE_ID AND E.EMAIL = E_MAIL 
+GROUP BY JH.EMPLOYEE_ID 
+INTO total_jobs;
+
+RETURN total_jobs;
+END $$
+
+DELIMITER ;
